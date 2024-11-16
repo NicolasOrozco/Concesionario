@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="0.0" prefWidth="665.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="53.0" layoutY="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="665.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="53.0" layoutY="343.0" stroke="TRANSPARENT" strokeType="INSIDE" width="666.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3f5f5" height="295.0" layoutY="49.0" stroke="TRANSPARENT" strokeType="INSIDE" width="666.0" />
+      <Label layoutX="67.0" layoutY="-16.0" prefHeight="80.0" prefWidth="360.0" text="TU CARRO UQ">
+         <font>
+            <Font name="Informal Roman" size="42.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9bdb" height="48.0" layoutX="-1.0" layoutY="79.0" stroke="#f85ec2" strokeLineCap="BUTT" strokeType="OUTSIDE" width="322.0" />
+      <Label layoutX="186.0" layoutY="87.0" prefHeight="33.0" prefWidth="133.0" style="-fx-font: minecraftia;" text="Iniciar Sesion">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="272.0" layoutY="274.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="141.0" text="Inicar Sesion">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutY="348.0" prefHeight="44.0" prefWidth="666.0" text="///////////////">
+         <font>
+            <Font name="ROGFonts-Regular" size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfUsuario" layoutX="342.0" layoutY="146.0" promptText="Usuario" />
+      <TextField fx:id="txfContraseña" layoutX="342.0" layoutY="205.0" promptText="Contraseña" />
+      <ImageView fitHeight="143.0" fitWidth="141.0" layoutX="115.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot%202024-11-10%20121150.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

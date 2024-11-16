@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.model;
+package co.edu.uniquindio.poo;
 
 public class Deportivo extends Carro{
     private double numeroCaballosDeFuerza, tiempo0a100kmph;

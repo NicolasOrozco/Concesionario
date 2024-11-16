@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="396.0" prefWidth="668.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="212.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="412.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="681.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" layoutX="-4.0" layoutY="-5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="671.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5270935960591133" endY="0.8571428571428572" startX="0.5270935960591133" startY="0.2512315270935961">
+               <stops>
+                  <Stop color="#4d4747" />
+                  <Stop color="#82834b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Line endX="100.0" layoutX="98.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="566.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="97.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="300.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="503.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="568.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d030" height="29.0" layoutX="-2.0" layoutY="367.0" stroke="BLACK" strokeType="INSIDE" width="670.0" />
+      <Line endX="100.0" layoutX="363.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="180.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Button fx:id="btnCerrarSesion" layoutX="525.0" layoutY="2.0" mnemonicParsing="false" onAction="#onCerrarSesion" text="Cerrar Sesión" />
+      <ListView fx:id="listVehiculos" layoutX="31.0" layoutY="49.0" prefHeight="287.0" prefWidth="606.0" />
+      <Button fx:id="btnVerDetalles" layoutX="516.0" layoutY="346.0" mnemonicParsing="false" onAction="#onVerDetalles" text="Ver Detalles" />
+   </children>
+</AnchorPane>

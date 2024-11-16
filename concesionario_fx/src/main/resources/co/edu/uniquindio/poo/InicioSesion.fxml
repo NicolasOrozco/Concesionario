@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,38 +9,82 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="0.0" prefWidth="665.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="396.0" prefWidth="668.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.InicioSesionViewController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="53.0" layoutY="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="665.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="53.0" layoutY="343.0" stroke="TRANSPARENT" strokeType="INSIDE" width="666.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3f5f5" height="295.0" layoutY="49.0" stroke="TRANSPARENT" strokeType="INSIDE" width="666.0" />
-      <Label layoutX="67.0" layoutY="-16.0" prefHeight="80.0" prefWidth="360.0" text="TU CARRO UQ">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="212.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="412.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="681.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" layoutX="-4.0" layoutY="-5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="671.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5270935960591133" endY="0.8571428571428572" startX="0.5270935960591133" startY="0.2512315270935961">
+               <stops>
+                  <Stop color="#4d4747" />
+                  <Stop color="#82834b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="64.0" layoutX="-4.0" layoutY="42.0" stroke="#eee200cc" strokeLineCap="BUTT" strokeType="OUTSIDE" width="673.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.123152709359606" endY="1.0" startX="0.7093596059113302">
+               <stops>
+                  <Stop color="#6f7231" />
+                  <Stop color="#b9c209" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lblTItulo" layoutX="235.0" layoutY="-21.0" prefHeight="80.0" prefWidth="214.0" text="TU CARRO UQ" textFill="WHITE">
          <font>
-            <Font name="Informal Roman" size="42.0" />
+            <Font name="Tw Cen MT Condensed Bold" size="42.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9bdb" height="48.0" layoutX="-1.0" layoutY="79.0" stroke="#f85ec2" strokeLineCap="BUTT" strokeType="OUTSIDE" width="322.0" />
-      <Label layoutX="186.0" layoutY="87.0" prefHeight="33.0" prefWidth="133.0" style="-fx-font: minecraftia;" text="Iniciar Sesion">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="-3.0" layoutY="117.0" stroke="#eee200cc" strokeLineCap="BUTT" strokeType="OUTSIDE" width="327.0">
+         <fill>
+            <LinearGradient endX="0.9605911330049262" endY="0.9704433497536946" startX="0.9704433497536946">
+               <stops>
+                  <Stop color="#efff00" />
+                  <Stop color="#b9c209" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label fx:id="lblIniciarSesion" layoutX="187.0" layoutY="124.0" prefHeight="33.0" prefWidth="133.0" style="-fx-font: minecraftia;" text="Iniciar Sesion" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="272.0" layoutY="274.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="141.0" text="Inicar Sesion">
+      <Button fx:id="btnIniciarSesion" layoutX="311.0" layoutY="287.0" mnemonicParsing="false" onAction="#onIniciarSesion" prefHeight="41.0" prefWidth="135.0" text="Inicar Sesión">
          <font>
             <Font name="Tw Cen MT Condensed" size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Label layoutY="348.0" prefHeight="44.0" prefWidth="666.0" text="///////////////">
-         <font>
-            <Font name="ROGFonts-Regular" size="42.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txfUsuario" layoutX="342.0" layoutY="146.0" promptText="Usuario" />
-      <TextField fx:id="txfContraseña" layoutX="342.0" layoutY="205.0" promptText="Contraseña" />
-      <ImageView fitHeight="143.0" fitWidth="141.0" layoutX="115.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txfUsuario" layoutX="357.0" layoutY="177.0" promptText="Usuario" />
+      <TextField fx:id="txfContraseña" layoutX="357.0" layoutY="234.0" promptText="Contraseña" />
+      <ImageView fx:id="imgAuto" fitHeight="243.0" fitWidth="245.0" layoutX="56.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Screenshot%202024-11-10%20121150.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblBienvenida" layoutX="190.0" layoutY="57.0" prefHeight="33.0" prefWidth="305.0" style="-fx-font: minecraftia;" text="Bienvenido al concesionario!" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Bold" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="98.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="566.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="97.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="300.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="503.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="568.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d030" height="29.0" layoutX="-2.0" layoutY="367.0" stroke="BLACK" strokeType="INSIDE" width="670.0" />
+      <Button fx:id="btnRecuperarContrasenia" layoutX="465.0" layoutY="287.0" mnemonicParsing="false" onAction="#onRecuperarContrasenia" prefHeight="43.0" prefWidth="194.0" text="Recuperar Contraseña">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

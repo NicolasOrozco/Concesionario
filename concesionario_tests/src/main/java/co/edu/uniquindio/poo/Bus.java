@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.model;
+package co.edu.uniquindio.poo;
 
 public class Bus extends Carro{
     private  int numEjes, numSalidasDeEmergencia;

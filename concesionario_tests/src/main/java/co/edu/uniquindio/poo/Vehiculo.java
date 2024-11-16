@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.model;
+package co.edu.uniquindio.poo;
 
 public class Vehiculo {
     private  String id,  marca, condicion, modelo;
@@ -99,5 +99,20 @@ public class Vehiculo {
     public void setId(String id){
         this.id = id;
     }
+    
+    public TipoCombustible getTipoCombustible() {
+        return tipoCombustible;
+    }
+    public void setTipoCombustible(TipoCombustible tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
+    public AtributosCombustible getAtributosCombustible() {
+        return atributosCombustible;
+    }
+    public void setAtributosCombustible(AtributosCombustible atributosCombustible) {
+        this.atributosCombustible = atributosCombustible;
+    }
+
+    
 
 }

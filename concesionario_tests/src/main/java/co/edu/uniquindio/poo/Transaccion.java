@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.model;
+package co.edu.uniquindio.poo;
 
 public abstract class Transaccion {
      Vehiculo vehiculo;
@@ -6,7 +6,11 @@ public abstract class Transaccion {
      Cliente cliente;
      Double valor;
 
-    public Transaccion() {
+    public Transaccion(Vehiculo vehiculo, Empleado empleado, Cliente cliente) {
+        this.vehiculo = vehiculo;
+        this.empleado = empleado;
+        this.cliente = cliente;
+        valor = calcularValor();
     }
     public abstract double calcularValor();
 

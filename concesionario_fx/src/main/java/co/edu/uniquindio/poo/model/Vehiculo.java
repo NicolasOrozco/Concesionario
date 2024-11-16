@@ -2,15 +2,16 @@ package co.edu.uniquindio.poo.model;
 
 public class Vehiculo {
     private  String id,  marca, condicion, modelo;
-    private  int cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
+    private  int año, cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
     private TipoCombustible tipoCombustible;
     private AtributosCombustible atributosCombustible;
    
 
-    public Vehiculo(String id, String marca, String condicion, String modelo, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
+    public Vehiculo(String id, String marca, String condicion, String modelo, int año,int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
         this.marca = marca;
         this.condicion = condicion;
         this.modelo = modelo;
+        this.año = año;
         this.cambios = cambios;
         this.cilindraje = cilindraje;
         this.VelMaxima = velMaxima;
@@ -28,6 +29,8 @@ public class Vehiculo {
             default: return new AtributosCombustible();
         }
     }
+
+    
 
     public String getMarca() {
         return marca;
@@ -99,5 +102,28 @@ public class Vehiculo {
     public void setId(String id){
         this.id = id;
     }
+    
+    public TipoCombustible getTipoCombustible() {
+        return tipoCombustible;
+    }
+    public void setTipoCombustible(TipoCombustible tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
+
+    public AtributosCombustible getAtributosCombustible() {
+        return atributosCombustible;
+    }
+    
+    public void setAtributosCombustible(AtributosCombustible atributosCombustible) {
+        this.atributosCombustible = atributosCombustible;
+    }
+
+    public  int getAño(){
+        return año;
+    }
+    public void setAño(int Año){
+        this.año = año;
+    }
+    
 
 }

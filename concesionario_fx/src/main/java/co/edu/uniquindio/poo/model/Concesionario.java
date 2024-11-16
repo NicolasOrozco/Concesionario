@@ -6,7 +6,8 @@
     public class Concesionario {
         private String nombre;
         private Collection<Empleado> empleados;
-        private Collection<Administrador> administradores;
+        private Collection<Empleado> blacklist;
+		private Collection<Administrador> administradores;
         private Collection<Cliente> clientes;
         private Collection<Vehiculo> vehiculos;
         private Collection<Transaccion> transacciones;
@@ -14,6 +15,7 @@
         public Concesionario(String nombre) {
             this.nombre = nombre;
             empleados = new LinkedList<>();
+            blacklist =  new LinkedList<>();
             administradores = new LinkedList<>();
             clientes = new LinkedList<>();
             vehiculos = new LinkedList<>();
@@ -21,6 +23,16 @@
         }
 
         public boolean verificarEmpleado(String id) {
+            boolean estaEmpleado = false;
+            for (Empleado empleado : empleados) {
+                if (empleado.getId().equals(id)) {
+                    estaEmpleado = true;
+                }
+            }
+            return estaEmpleado;
+        }
+
+        public boolean verificarEmpleadoBlacklist(String id){
             boolean estaEmpleado = false;
             for (Empleado empleado : empleados) {
                 if (empleado.getId().equals(id)) {
@@ -61,7 +73,7 @@
         }
 
         public void agregarEmpleado(Empleado empleado) {
-            if (!verificarEmpleado(empleado.getId())) {
+            if (!verificarEmpleado(empleado.getId())|| !verificarEmpleadoBlacklist(empleado.getId())) {
                 empleados.add(empleado);
 
             }
@@ -84,7 +96,14 @@
                 vehiculos.add(vehiculo);
             }
         }
-
+        public void banearEmpleado(String id){
+            for(Empleado empleado: empleados){
+                if(empleado.getId().equals(id)){
+                   blacklist.add(empleado);
+                   empleados.remove(empleado);
+                }
+            }
+        }
         public void eliminarEmpleado(String id) {
             for (Empleado empleado : empleados) {
                 if (empleado.getId().equals(id)) {
@@ -210,6 +229,13 @@
         public void setAdministradores(Collection<Administrador> administradores) {
             this.administradores = administradores;
         }
+        public Collection<Empleado> getBlacklist() {
+			return blacklist;
+		}
+
+		public void setBlacklist(Collection<Empleado> blacklist) {
+			this.blacklist = blacklist;
+		}
 
         public Collection<Empleado> getEmpleados() {
             return empleados;

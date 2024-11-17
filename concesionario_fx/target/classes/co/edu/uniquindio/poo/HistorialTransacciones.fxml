@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
+   <children>
+      <Button fx:id="btnVolver" layoutX="884.0" layoutY="6.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="28.0" prefWidth="91.0" text="Volver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <AnchorPane layoutY="44.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label fx:id="lblTitulo" layoutX="272.0" layoutY="3.0" text="HISTORIAL DE TRANSACCIONES" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Bold" size="42.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="102.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="170.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="831.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="898.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <TableView layoutX="22.0" layoutY="56.0" prefHeight="452.0" prefWidth="957.0">
+              <columns>
+                <TableColumn prefWidth="177.0" text="Fecha" />
+                <TableColumn prefWidth="199.0" text="Transacción" />
+                  <TableColumn prefWidth="188.0" text="Empleado" />
+                  <TableColumn prefWidth="206.0" text="Cliente" />
+                  <TableColumn prefWidth="186.0" text="Valor" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

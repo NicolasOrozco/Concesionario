@@ -20,30 +20,27 @@ public class InicioSesionViewController {
 
     private InicioSesionController inicioSesionController;
 
-    // Etiquetas y texto
+    
     @FXML
-    private Label lblTitulo;
-    @FXML
-    private Label lblIniciarSesion;
-    @FXML
-    private Label lblBienvenida;
+    private Button btnIniciarSesion;
 
     @FXML
     private Button btnRecuperarContrasenia;
 
-    // Campos de texto
-    @FXML
-    private TextField txfUsuario;
     @FXML
     private TextField txfContraseña;
 
-    // Imagen
     @FXML
-    private ImageView imgAuto;
+    private Label lblTitulo;
 
-    // Botón
     @FXML
-    private Button btnIniciarSesion;
+    private ImageView imgConcesionario;
+
+    @FXML
+    private Label lblBienvenida;
+
+    @FXML
+    private TextField txfUsuario;
 
     @FXML
     void onRecuperarContrasenia(ActionEvent event){

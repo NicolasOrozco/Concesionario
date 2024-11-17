@@ -13,22 +13,10 @@ public class HomeClienteViewController {
     private Button btnCerrarSesion;
 
     @FXML
+    private Label lblTitulo;
+
+    @FXML
     private ListView<?> listVehiculos;
-
-    @FXML
-    void 4d4747(ActionEvent event) {
-
-    }
-
-    @FXML
-    void 82834b(ActionEvent event) {
-
-    }
-
-    @FXML
-    void b8d030(ActionEvent event) {
-
-    }
 
     @FXML
     void onCerrarSesion(ActionEvent event) {

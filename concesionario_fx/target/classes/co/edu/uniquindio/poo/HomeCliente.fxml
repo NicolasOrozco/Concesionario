@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,30 +9,26 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="396.0" prefWidth="668.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="212.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="412.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="681.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" layoutX="-4.0" layoutY="-5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="671.0">
-         <fill>
-            <LinearGradient cycleMethod="REFLECT" endX="0.5270935960591133" endY="0.8571428571428572" startX="0.5270935960591133" startY="0.2512315270935961">
-               <stops>
-                  <Stop color="#4d4747" />
-                  <Stop color="#82834b" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </fill></Rectangle>
-      <Line endX="100.0" layoutX="98.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="566.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="97.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="300.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="503.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="568.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d030" height="29.0" layoutX="-2.0" layoutY="367.0" stroke="BLACK" strokeType="INSIDE" width="670.0" />
-      <Line endX="100.0" layoutX="363.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="180.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Button fx:id="btnCerrarSesion" layoutX="525.0" layoutY="2.0" mnemonicParsing="false" onAction="#onCerrarSesion" text="Cerrar Sesión" />
-      <ListView fx:id="listVehiculos" layoutX="31.0" layoutY="49.0" prefHeight="287.0" prefWidth="606.0" />
-      <Button fx:id="btnVerDetalles" layoutX="516.0" layoutY="346.0" mnemonicParsing="false" onAction="#onVerDetalles" text="Ver Detalles" />
+      <Button fx:id="btnCerrarSesion" layoutX="870.0" layoutY="6.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="28.0" prefWidth="112.0" text="Cerrar Sesión">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <AnchorPane layoutY="44.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
+         <children>
+            <ListView fx:id="listVehiculos" layoutX="14.0" layoutY="56.0" prefHeight="449.0" prefWidth="969.0" />
+            <Label fx:id="lblTitulo" layoutX="318.0" layoutY="4.0" text="VEHICULOS DISPONIBLES" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Bold" size="42.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="216.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="101.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="785.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="898.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnVerDetalles" layoutX="433.0" layoutY="567.0" mnemonicParsing="false" onAction="#onVerDetalles" prefHeight="25.0" prefWidth="147.0" text="Ver Detalles" />
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,33 +9,55 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="396.0" prefWidth="668.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="212.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="412.0" layoutX="-8.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="681.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" layoutY="-5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="671.0">
-         <fill>
-            <LinearGradient cycleMethod="REFLECT" endX="0.5270935960591133" endY="0.8571428571428572" startX="0.5270935960591133" startY="0.2512315270935961">
-               <stops>
-                  <Stop color="#4d4747" />
-                  <Stop color="#82834b" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </fill></Rectangle>
-      <Line endX="100.0" layoutX="98.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="566.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="97.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="300.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="503.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="568.0" layoutY="365.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d030" height="29.0" layoutX="-2.0" layoutY="367.0" stroke="BLACK" strokeType="INSIDE" width="670.0" />
-      <Line endX="100.0" layoutX="396.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="100.0" layoutX="275.0" layoutY="21.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d030" height="29.0" layoutX="-4.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="670.0" />
-      <ListView fx:id="listVehiculos" layoutX="10.0" layoutY="74.0" prefHeight="273.0" prefWidth="349.0" />
-      <Button fx:id="btnCerrarSesion" layoutX="513.0" mnemonicParsing="false" onAction="#onCerrarSesion" text="Cerrar Sesión" />
-      <Button fx:id="btnCrearCliente" layoutX="12.0" layoutY="3.0" mnemonicParsing="false" onAction="#onCrearCliente" text="Crear Cliente" />
-      <Button fx:id="btnComprarVehiculo" layoutX="159.0" layoutY="3.0" mnemonicParsing="false" onAction="#onComprarVehiculo" text="Comprar Vehiculo" />
-      <ComboBox layoutX="392.0" layoutY="95.0" prefHeight="39.0" prefWidth="232.0" promptText="Elegir Transacción..." />
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #262626;">
+         <children>
+            <ImageView fx:id="imgConcesionario" fitHeight="610.0" fitWidth="526.0" layoutX="-10.0" layoutY="-10.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@carage-koenogsegg-dealer_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnVenderVehiculos" layoutX="640.0" layoutY="324.0" mnemonicParsing="false" onAction="#onVenderVehiculos" prefHeight="43.0" prefWidth="256.0" text="Vender Vehiculos">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnComprarVehiculos" layoutX="640.0" layoutY="387.0" mnemonicParsing="false" onAction="#onComprarVehiculos" prefHeight="43.0" prefWidth="256.0" text="Comprar Vehiculos">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblPregunta" layoutX="695.0" layoutY="261.0" text="¿Qué desea hacer?" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBienvenida" layoutX="647.0" layoutY="129.0" text="Sesión iniciada como empleado" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo" layoutX="657.0" layoutY="81.0" text="BIENVENIDO!" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAgregarClientes" layoutX="640.0" layoutY="448.0" mnemonicParsing="false" onAction="#onAgregarClientes" prefHeight="43.0" prefWidth="256.0" text="Agregar Clientes">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

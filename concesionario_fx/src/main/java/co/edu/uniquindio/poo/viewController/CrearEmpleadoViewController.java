@@ -73,7 +73,7 @@ public class CrearEmpleadoViewController {
 
     @FXML
     void onVolver(ActionEvent event) {
-        app.openViewAdministrador();||
+        app.openViewAdministrador();
     }
     @FXML
     void initialize() {

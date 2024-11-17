@@ -3,12 +3,15 @@ package co.edu.uniquindio.poo.model;
 public class Bus extends Carro{
     private  int numEjes, numSalidasDeEmergencia;
 
-    public Bus(String id,String marca, String condicion, String modelo, int año,  int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int numPuertas, boolean tieneAireAcondicionado, boolean tieneCamaraDeReversa, boolean tieneControlCrucero, boolean tieneBolsaDeAire, boolean tieneABS, boolean tieneSensoresColision, boolean tieneSensoresTraficoCruzado, boolean tieneAsistenciaPermanenciaDeCarril, int numEjes, int numSalidasDeEmergencia, int precio) {
-        super(id, marca, condicion, modelo, año, cambios, cilindraje, velMaxima, numeroPasajeros, tipoCombustible, numPuertas, tieneAireAcondicionado, tieneCamaraDeReversa, tieneControlCrucero, tieneBolsaDeAire, tieneABS, tieneSensoresColision, tieneSensoresTraficoCruzado, tieneAsistenciaPermanenciaDeCarril, precio);
+    public Bus(String id,String marca, String condicion, String modelo, int año,Transmision transmision,  int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int numPuertas, boolean tieneAireAcondicionado, boolean tieneCamaraDeReversa, boolean tieneControlCrucero, boolean tieneBolsaDeAire, boolean tieneABS, boolean tieneSensoresColision, boolean tieneSensoresTraficoCruzado, boolean tieneAsistenciaPermanenciaDeCarril, int numEjes, int numSalidasDeEmergencia, int precio) {
+        super(id, marca, condicion, modelo, año,transmision, cambios, cilindraje, velMaxima, numeroPasajeros, tipoCombustible, numPuertas, tieneAireAcondicionado, tieneCamaraDeReversa, tieneControlCrucero, tieneBolsaDeAire, tieneABS, tieneSensoresColision, tieneSensoresTraficoCruzado, tieneAsistenciaPermanenciaDeCarril, precio);
         this.numEjes = numEjes;
         this.numSalidasDeEmergencia = numSalidasDeEmergencia;
     }
-
+    
+    public String obtenerTipoVehiculo(){
+        return "Camion";
+    }
     public int getNumEjes() {
         return numEjes;
     }

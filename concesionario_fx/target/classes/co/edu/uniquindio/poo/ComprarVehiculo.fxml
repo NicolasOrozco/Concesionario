@@ -1,63 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController">
-   <children>
-      <AnchorPane layoutY="44.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
-         <children>
-            <Label fx:id="lblTitulo" layoutX="342.0" text="REGISTRO DE VEHICULO" textFill="WHITE">
+<VBox alignment="TOP_LEFT" minHeight="600.0" minWidth="1000.0" spacing="10" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ControladorVehiculos">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="55.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+        <!-- Sección de selección del tipo de vehículo y combustible -->
+        <HBox spacing="10">
+           <children>
+               <Label text="Tipo de Vehículo:" textFill="WHITE">
                <font>
-                  <Font name="Tw Cen MT Condensed Bold" size="42.0" />
+                  <Font name="Tw Cen MT Condensed" size="35.0" />
                </font>
             </Label>
-            <Line endX="100.0" layoutX="214.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="100.0" layoutX="102.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="100.0" layoutX="896.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="100.0" layoutX="796.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Label fx:id="lblNombre" layoutX="22.0" layoutY="154.0" prefHeight="45.0" prefWidth="203.0" text="Tipo de Vehiculo:" textFill="WHITE">
+               <ComboBox fx:id="tipoVehiculoCombo" promptText="Seleccionar" />
+           </children>
+        </HBox>
+        <HBox spacing="10">
+           <children>
+               <Label text="Tipo de Combustible:" textFill="WHITE">
                <font>
-                  <Font name="Tw Cen MT Condensed" size="40.0" />
+                  <Font name="Tw Cen MT Condensed" size="35.0" />
                </font>
             </Label>
-            <Button fx:id="btnCrearEmpleado" layoutX="541.0" layoutY="428.0" mnemonicParsing="false" onAction="#onCrearEmpleado" prefHeight="46.0" prefWidth="167.0" text="Registrar">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnVolver" layoutX="316.0" layoutY="428.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="46.0" prefWidth="155.0" text="Volver">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <TextField fx:id="txfNombre" layoutX="285.0" layoutY="281.0" prefHeight="39.0" prefWidth="186.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <ComboBox layoutX="285.0" layoutY="156.0" prefHeight="39.0" prefWidth="186.0" />
-            <Label fx:id="lblNombre1" layoutX="22.0" layoutY="279.0" prefHeight="45.0" prefWidth="76.0" text="Placa" textFill="WHITE">
-               <font>
-                  <Font name="Tw Cen MT Condensed" size="40.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblNombre2" layoutX="22.0" layoutY="215.0" prefHeight="45.0" prefWidth="258.0" text="Tipo de Combustible:" textFill="WHITE">
-               <font>
-                  <Font name="Tw Cen MT Condensed" size="40.0" />
-               </font>
-            </Label>
-            <ComboBox layoutX="285.0" layoutY="217.0" prefHeight="39.0" prefWidth="186.0" />
-            <Line endX="100.0" layoutX="501.0" layoutY="145.0" rotate="90.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="100.0" layoutX="501.0" layoutY="318.0" rotate="90.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-         </children>
-      </AnchorPane>
-   </children>
-</AnchorPane>
+               <ComboBox fx:id="tipoCombustibleCombo" promptText="Seleccionar" />
+           </children>
+        </HBox>
+        
+        <!-- Sección de entrada para los campos comunes de Vehículo -->
+        <VBox spacing="10">
+           <children>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="ID:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="idField" promptText="Ingrese el ID" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Marca:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="marcaField" promptText="Ingrese la marca" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Modelo:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="modeloField" promptText="Ingrese el modelo" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Año:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="añoField" promptText="Ingrese el año" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Transmisión:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <ComboBox fx:id="transmisionCombo" promptText="Seleccionar" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Número de Cambios:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="cambiosField" promptText="Ingrese el número de cambios" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Cilindraje:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="cilindrajeField" promptText="Ingrese el cilindraje" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Velocidad Máxima:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="velMaximaField" promptText="Ingrese la velocidad máxima" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Número de Pasajeros:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="numPasajerosField" promptText="Ingrese el número de pasajeros" />
+                  </children>
+               </HBox>
+               <HBox spacing="10">
+                  <children>
+                      <Label text="Precio:" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="35.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="precioField" promptText="Ingrese el precio" />
+                  </children>
+               </HBox>
+           </children>
+        </VBox>
+
+        <!-- Contenedor dinámico para campos específicos -->
+        <VBox fx:id="camposEspecificos" spacing="10">
+            <!-- Campos adicionales según tipo de vehículo y combustible -->
+        </VBox>
+
+        <!-- Botón para registrar el vehículo -->
+        <Button alignment="CENTER" onAction="#registrarVehiculo" text="Registrar Vehículo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="55.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+    </children>
+</VBox>

@@ -20,7 +20,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="btnVenderVehiculos" layoutX="640.0" layoutY="324.0" mnemonicParsing="false" onAction="#onVenderVehiculos" prefHeight="43.0" prefWidth="256.0" text="Vender Vehiculos">
+      <Button fx:id="btnRealizarTransaccion" layoutX="640.0" layoutY="300.0" mnemonicParsing="false" onAction="#onRealizarTransaccion" prefHeight="43.0" prefWidth="256.0" text="Realizar Transacción">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -28,7 +28,7 @@
             <Font name="Tw Cen MT Condensed" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="btnComprarVehiculos" layoutX="640.0" layoutY="387.0" mnemonicParsing="false" onAction="#onComprarVehiculos" prefHeight="43.0" prefWidth="256.0" text="Comprar Vehiculos">
+      <Button fx:id="btnComprarVehiculos" layoutX="640.0" layoutY="358.0" mnemonicParsing="false" onAction="#onComprarVehiculos" prefHeight="43.0" prefWidth="256.0" text="Comprar Vehiculos">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -36,7 +36,7 @@
             <Font name="Tw Cen MT Condensed" size="24.0" />
          </font>
       </Button>
-      <Label fx:id="lblPregunta" layoutX="695.0" layoutY="261.0" text="¿Qué desea hacer?" textFill="WHITE">
+      <Label fx:id="lblPregunta" layoutX="695.0" layoutY="257.0" text="¿Qué desea hacer?" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="26.0" />
          </font>
@@ -51,7 +51,15 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
          </font>
       </Label>
-      <Button fx:id="btnAgregarClientes" layoutX="640.0" layoutY="448.0" mnemonicParsing="false" onAction="#onAgregarClientes" prefHeight="43.0" prefWidth="256.0" text="Agregar Clientes">
+      <Button fx:id="btnAgregarClientes" layoutX="640.0" layoutY="417.0" mnemonicParsing="false" onAction="#onAgregarClientes" prefHeight="43.0" prefWidth="256.0" text="Agregar Clientes">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCerrarSesion" layoutX="640.0" layoutY="475.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="43.0" prefWidth="256.0" text="Cerrar Sesión">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

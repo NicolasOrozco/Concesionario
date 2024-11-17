@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeEmpleadoViewController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #262626;">
+         <children>
+            <ImageView fx:id="imgConcesionario" fitHeight="610.0" fitWidth="526.0" layoutX="-10.0" layoutY="-10.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@carage-koenogsegg-dealer_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnAlquilar" layoutX="640.0" layoutY="310.0" mnemonicParsing="false" onAction="#onAlquilar" prefHeight="43.0" prefWidth="256.0" text="Realizar un Alquiler">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVender" layoutX="640.0" layoutY="370.0" mnemonicParsing="false" onAction="#onVender" prefHeight="43.0" prefWidth="256.0" text="Realizar una Venta">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblSeleccionarOpcion" layoutX="684.0" layoutY="270.0" text="Seleccione una opción" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo" layoutX="590.0" layoutY="96.0" text="¿QUE DESEAR HACER?" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

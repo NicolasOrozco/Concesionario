@@ -51,5 +51,13 @@
             <Font name="Tw Cen MT Condensed" size="26.0" />
          </font>
       </Label>
+      <Button fx:id="btnCerrarSesion" layoutX="646.0" layoutY="457.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="43.0" prefWidth="256.0" text="Cerrar Sesión">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

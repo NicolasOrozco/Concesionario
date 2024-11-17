@@ -13,18 +13,22 @@ import javafx.fxml.FXML;
 
 public class HomeEmpleadoViewController {
 
+    HomeEmpleadoController homeEmpleadoController;
     App app;
     @FXML
     private URL location;
-
+    
     @FXML
-    private Button btnVenderVehiculos;
+    private Button btnRealizarTransaccion;
 
     @FXML
     private Label lblPregunta;
 
     @FXML
     private Label lblTitulo;
+
+    @FXML
+    private Button btnCerrarSesion;
 
     @FXML
     private ImageView imgConcesionario;
@@ -39,8 +43,13 @@ public class HomeEmpleadoViewController {
     private Button btnAgregarClientes;
 
     @FXML
-    void onVenderVehiculos(ActionEvent event) {
+    void initialize() {
+        homeEmpleadoController = new HomeEmpleadoController(app.concesionario);
+    }
 
+    @FXML
+    void onRealizarTransaccion(ActionEvent event) {
+        
     }
 
     @FXML
@@ -53,8 +62,16 @@ public class HomeEmpleadoViewController {
 
     }
 
+    @FXML
+    void onCerrarSesion(ActionEvent event) {
+
+    }
+
     public void setApp(App app) {
         this.app = app;
     }
+
+
+
     
 }

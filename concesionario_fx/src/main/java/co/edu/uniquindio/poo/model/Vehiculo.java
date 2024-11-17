@@ -1,17 +1,19 @@
 package co.edu.uniquindio.poo.model;
 
-public class Vehiculo implements Autonomia{
+public  abstract class Vehiculo implements Autonomia{
     private  String id,  marca, condicion, modelo;
+    private Transmision transmision;
     private  int año, cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
     private TipoCombustible tipoCombustible;
     private AtributosCombustible atributosCombustible;
    
 
-    public Vehiculo(String id, String marca, String condicion, String modelo, int año,int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
+    public Vehiculo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
         this.marca = marca;
         this.condicion = condicion;
         this.modelo = modelo;
         this.año = año;
+        this.transmision = transmision;
         this.cambios = cambios;
         this.cilindraje = cilindraje;
         this.VelMaxima = velMaxima;
@@ -34,16 +36,13 @@ public class Vehiculo implements Autonomia{
         if(tipoCombustible == TipoCombustible.DIESEL){
             autonomia = cilindraje/100;
         }
-        if(tipoCombustible == TipoCombustible.ELECTRICO){
-            //
-        }
         if(tipoCombustible == TipoCombustible.HIBRIDO){
             autonomia = cilindraje/100;
         }
         return autonomia;
     }
-
     
+    public abstract String obtenerTipoVehiculo();
 
     public String getMarca() {
         return marca;
@@ -140,13 +139,13 @@ public class Vehiculo implements Autonomia{
     @Override
     public String toString() {
         return "id=" + id + ", marca=" + marca + ", condicion=" + condicion + ", modelo=" + modelo + ", año="
-                + año + ", cambios=" + cambios + ", cilindraje=" + cilindraje + ", VelMaxima=" + VelMaxima
+                + año + ", transimision="+ transmision.name() + ", cambios=" + cambios + ", cilindraje=" + cilindraje + ", VelMaxima=" + VelMaxima
                 + ", numeroPasajeros=" + numeroPasajeros + ", precio=" + precio + ", tipoCombustible=" + tipoCombustible
                 + ", atributosCombustible=" + atributosCombustible.toString() + ", ";
     }
-    @Override
+    
     public String toStringChiquito(){
-        return "marca: " + marca + ", "
+        return "marca: " + marca + ", modelo" + modelo + ", Precio= " + precio ;
     }
     
     

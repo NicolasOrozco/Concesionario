@@ -35,6 +35,9 @@ public class HomeAdministradorViewController {
     private Label lblBienvenida;
 
     @FXML
+    private Button btnCerrarSesion;
+
+    @FXML
     private Button btnHistorialTransacciones;
 
     @FXML
@@ -51,4 +54,9 @@ public class HomeAdministradorViewController {
         this.app = app;
     }
 
+    @FXML
+    void onCerrarSesion(ActionEvent event) {
+        app.openViewPrincipal();
+    }
+    
 }

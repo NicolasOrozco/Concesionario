@@ -11,13 +11,12 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
    <children>
-      <Button fx:id="btnCerrarSesion" layoutX="870.0" layoutY="6.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="28.0" prefWidth="112.0" text="Cerrar Sesión">
+      <Button fx:id="btnCerrarSesion" layoutX="834.0" layoutY="1.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="39.0" prefWidth="147.0" text="Cerrar Sesión">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
       <AnchorPane layoutY="44.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
          <children>
-            <ListView fx:id="listVehiculos" layoutX="14.0" layoutY="56.0" prefHeight="449.0" prefWidth="969.0" />
             <Label fx:id="lblTitulo" layoutX="318.0" layoutY="4.0" text="VEHICULOS DISPONIBLES" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed Bold" size="42.0" />
@@ -27,8 +26,17 @@
             <Line endX="100.0" layoutX="101.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="785.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="898.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <TableView fx:id="tblVehiculos" layoutX="24.0" layoutY="59.0" prefHeight="429.0" prefWidth="946.0">
+              <columns>
+                <TableColumn fx:id="tbcTipoVehiculo" minWidth="3.0" prefWidth="202.0" text="Tipo" />
+                  <TableColumn fx:id="tbcTipoCombustible" prefWidth="184.0" text="Combustible" />
+                  <TableColumn fx:id="tbcMarca" prefWidth="176.0" text="Marca" />
+                  <TableColumn fx:id="tbcModelo" prefWidth="184.0" text="Modelo" />
+                  <TableColumn fx:id="tbcPrecio" prefWidth="199.0" text="Precio" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
-      <Button fx:id="btnVerDetalles" layoutX="433.0" layoutY="567.0" mnemonicParsing="false" onAction="#onVerDetalles" prefHeight="25.0" prefWidth="147.0" text="Ver Detalles" />
+      <Button fx:id="btnVerDetalles" layoutX="433.0" layoutY="560.0" mnemonicParsing="false" onAction="#onVerDetalles" prefHeight="25.0" prefWidth="147.0" text="Ver Detalles" />
    </children>
 </AnchorPane>

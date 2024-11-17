@@ -11,34 +11,39 @@ import co.edu.uniquindio.poo.controller.InicioSesionController;
 import java.net.URL;
 import javafx.fxml.FXML;
 
+public class RecuperarContraseniaViewController {
+    
+    @FXML
+    private Button btnVolver;
 
-public class InicioSesionViewController {
+    @FXML
+    private Button btnAceptar;
+
+    @FXML
+    private Label lblPreguntaSeguridad;
+
+    @FXML
+    private Label lblNuevaContrasenia;
 
     @FXML
     private Label lblTitulo;
 
     @FXML
-    private Label lblPregunta;
-
-    @FXML
     private ImageView imgConcesionario;
 
     @FXML
-    private Button btnAdministrarEmpleados;
+    private TextField txfNuevaContrasenia;
 
     @FXML
-    private Label lblBienvenida;
+    private TextField txfRespuesta;
 
     @FXML
-    private Button btnHistorialTransacciones;
-
-    @FXML
-    void onAdministrarEmpleados(ActionEvent event) {
+    void onAceptar(ActionEvent event) {
 
     }
 
     @FXML
-    void onHistorialTransacciones(ActionEvent event) {
+    void onVolver(ActionEvent event) {
 
     }
 

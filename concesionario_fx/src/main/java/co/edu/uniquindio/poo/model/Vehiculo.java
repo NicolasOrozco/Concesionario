@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.model;
 
-public class Vehiculo {
+public class Vehiculo implements Autonomia{
     private  String id,  marca, condicion, modelo;
     private  int año, cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
     private TipoCombustible tipoCombustible;
@@ -28,6 +28,19 @@ public class Vehiculo {
             case HIBRIDO: return new AtributosHibridos();
             default: return new AtributosCombustible();
         }
+    }
+    public int calcularAutonomia(){
+        int autonomia = 0;
+        if(tipoCombustible == TipoCombustible.DIESEL){
+            autonomia = cilindraje/100;
+        }
+        if(tipoCombustible == TipoCombustible.ELECTRICO){
+            //
+        }
+        if(tipoCombustible == TipoCombustible.HIBRIDO){
+            autonomia = cilindraje/100;
+        }
+        return autonomia;
     }
 
     

@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeAdministradorViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.RecuperarContraseniaViewController">
    <children>
-      <Button fx:id="btnAdministrarEmpleados" layoutX="645.0" layoutY="323.0" mnemonicParsing="false" onAction="#onAdministrarEmpleados" prefHeight="43.0" prefWidth="256.0" text="Administrar Empleados">
+      <Button fx:id="btnAceptar" layoutX="773.0" layoutY="448.0" mnemonicParsing="false" onAction="#onAceptar" prefHeight="43.0" prefWidth="170.0" text="Aceptar">
          <font>
             <Font name="Tw Cen MT Condensed" size="24.0" />
          </font>
@@ -19,7 +19,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnHistorialTransacciones" layoutX="646.0" layoutY="389.0" mnemonicParsing="false" onAction="#onHistorialTransacciones" prefHeight="43.0" prefWidth="256.0" text="Ver Historial de Transacciones">
+      <TextField fx:id="txfRespuesta" layoutX="564.0" layoutY="261.0" prefHeight="36.0" prefWidth="406.0" promptText="Respuesta">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="btnVolver" layoutX="582.0" layoutY="448.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="43.0" prefWidth="170.0" text="Volver">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -36,17 +40,22 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Label fx:id="lblTitulo" layoutX="663.0" layoutY="71.0" text="BIENVENIDO!" textFill="WHITE">
+      <Label fx:id="lblTitulo" layoutX="564.0" layoutY="103.0" text="RECUPERAR CONTRASEÑA" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
          </font>
       </Label>
-      <Label fx:id="lblBienvenida" layoutX="636.0" layoutY="119.0" text="Sesión iniciada como administrador" textFill="WHITE">
+      <Label fx:id="lblPreguntaSeguridad" layoutX="565.0" layoutY="219.0" text="%key.unspecified" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="26.0" />
          </font>
       </Label>
-      <Label fx:id="lblPregunta" layoutX="700.0" layoutY="267.0" text="¿Qué desea hacer?" textFill="WHITE">
+      <TextField fx:id="txfNuevaContrasenia" layoutX="564.0" layoutY="364.0" prefHeight="36.0" prefWidth="406.0" promptText="Contraseña">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="lblNuevaContrasenia" layoutX="564.0" layoutY="327.0" text="Nueva Contraseña" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="26.0" />
          </font>

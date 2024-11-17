@@ -9,16 +9,15 @@ import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
 import co.edu.uniquindio.poo.controller.InicioSesionController;
 import java.net.URL;
-import javafx.fxml.FXML;
 
 
 public class InicioSesionViewController {
+    InicioSesionController inicioSesionController;
 
-    App app;
+    private App app;
     @FXML
     private URL location;
 
-    private InicioSesionController inicioSesionController;
 
     
     @FXML
@@ -47,6 +46,11 @@ public class InicioSesionViewController {
 
     }
 
+    @FXML
+    void initialize() {
+        inicioSesionController = new InicioSesionController(app.concesionario);
+    }
+
     // Método manejador para el botón
     @FXML
     private void onIniciarSesion() {
@@ -68,15 +72,12 @@ public class InicioSesionViewController {
                 break;
         }
         
-        
+    
     }
-    //elegirSesion()
+   
 
     public void setApp(App app) {
         this.app = app;
     }
 
 }
-
-
-

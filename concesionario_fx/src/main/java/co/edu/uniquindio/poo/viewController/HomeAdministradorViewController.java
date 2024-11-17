@@ -7,12 +7,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
-import co.edu.uniquindio.poo.controller.InicioSesionController;
+import co.edu.uniquindio.poo.controller.HomeAdministradorController;
 import java.net.URL;
 import javafx.fxml.FXML;
+import java.net.URL;
 
 
-public class InicioSesionViewController {
+public class HomeAdministradorViewController {
+
+    App app;
+    @FXML
+    private URL location;
 
     @FXML
     private Label lblTitulo;
@@ -34,12 +39,16 @@ public class InicioSesionViewController {
 
     @FXML
     void onAdministrarEmpleados(ActionEvent event) {
-
+        
     }
 
     @FXML
     void onHistorialTransacciones(ActionEvent event) {
 
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
 
 }

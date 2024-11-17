@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.InicioSesionViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeAdministradorViewController">
    <children>
       <Button fx:id="btnAdministrarEmpleados" layoutX="645.0" layoutY="323.0" mnemonicParsing="false" onAction="#onAdministrarEmpleados" prefHeight="43.0" prefWidth="256.0" text="Administrar Empleados">
          <font>

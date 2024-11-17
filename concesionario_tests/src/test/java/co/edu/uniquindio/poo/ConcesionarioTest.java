@@ -18,9 +18,9 @@ public class ConcesionarioTest {
     @BeforeEach
     public void setUp() {
         concesionario = new Concesionario("Concesionario de Prueba");
-        empleado = new Empleado("Carlos", "emp123", "clave123");
-        cliente = new Cliente("Ana", "cli123", "claveCliente");
-        vehiculo = new Vehiculo("veh001", "Toyota", "Nuevo", "Corolla", 5, 1800, 220, 5, TipoCombustible.GASOLINA, 50000);
+        empleado = new Empleado("Carlos", "emp123", "clave123", "¿En qué ciudad naciste?", "Armenia");
+        cliente = new Cliente("Ana", "cli123", "claveCliente", "¿Quien fue tu mejor amigo en la infancia?", "Pepito");
+        vehiculo = new Deportivo("veh001", "Toyota", "Nuevo", "Corolla", 5, 1800, 220, 5, TipoCombustible.GASOLINA, 50000);
     }
 
     @Test

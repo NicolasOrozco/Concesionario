@@ -6,11 +6,7 @@ public abstract class Transaccion {
      Cliente cliente;
      Double valor;
 
-    public Transaccion(Vehiculo vehiculo, Empleado empleado, Cliente cliente) {
-        this.vehiculo = vehiculo;
-        this.empleado = empleado;
-        this.cliente = cliente;
-        valor = calcularValor();
+    public Transaccion() {
     }
     public abstract double calcularValor();
 

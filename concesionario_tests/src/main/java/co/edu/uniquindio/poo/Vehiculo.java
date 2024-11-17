@@ -1,16 +1,19 @@
 package co.edu.uniquindio.poo;
 
-public class Vehiculo {
+public  abstract class Vehiculo implements Autonomia{
     private  String id,  marca, condicion, modelo;
-    private  int cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
+    private Transmision transmision;
+    private  int año, cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
     private TipoCombustible tipoCombustible;
     private AtributosCombustible atributosCombustible;
    
 
-    public Vehiculo(String id, String marca, String condicion, String modelo, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
+    public Vehiculo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
         this.marca = marca;
         this.condicion = condicion;
         this.modelo = modelo;
+        this.año = año;
+        this.transmision = transmision;
         this.cambios = cambios;
         this.cilindraje = cilindraje;
         this.VelMaxima = velMaxima;
@@ -28,6 +31,18 @@ public class Vehiculo {
             default: return new AtributosCombustible();
         }
     }
+    public int calcularAutonomia(){
+        int autonomia = 0;
+        if(tipoCombustible == TipoCombustible.DIESEL){
+            autonomia = cilindraje/100;
+        }
+        if(tipoCombustible == TipoCombustible.HIBRIDO){
+            autonomia = cilindraje/100;
+        }
+        return autonomia;
+    }
+    
+    public abstract String obtenerTipoVehiculo();
 
     public String getMarca() {
         return marca;
@@ -106,13 +121,34 @@ public class Vehiculo {
     public void setTipoCombustible(TipoCombustible tipoCombustible) {
         this.tipoCombustible = tipoCombustible;
     }
+
     public AtributosCombustible getAtributosCombustible() {
         return atributosCombustible;
     }
+    
     public void setAtributosCombustible(AtributosCombustible atributosCombustible) {
         this.atributosCombustible = atributosCombustible;
     }
 
+    public  int getAño(){
+        return año;
+    }
+    public void setAño(int Año){
+        this.año = año;
+    }
+    @Override
+    public String toString() {
+        return "id=" + id + ", marca=" + marca + ", condicion=" + condicion + ", modelo=" + modelo + ", año="
+                + año + ", transimision="+ transmision.name() + ", cambios=" + cambios + ", cilindraje=" + cilindraje + ", VelMaxima=" + VelMaxima
+                + ", numeroPasajeros=" + numeroPasajeros + ", precio=" + precio + ", tipoCombustible=" + tipoCombustible
+                + ", atributosCombustible=" + atributosCombustible.toString() + ", ";
+    }
+    
+    public String toStringChiquito(){
+        return "marca: " + marca + ", modelo" + modelo + ", Precio= " + precio ;
+    }
+    
+    
     
 
 }

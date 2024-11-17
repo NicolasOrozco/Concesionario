@@ -5,17 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
 import co.edu.uniquindio.poo.controller.CrearEmpleadoController;
 import java.net.URL;
-import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import co.edu.uniquindio.poo.App;
 import co.edu.uniquindio.poo.model.*;
-import co.edu.uniquindio.poo.controller.*;
 
 public class CrearEmpleadoViewController {
     CrearEmpleadoController crearEmpleadoController;

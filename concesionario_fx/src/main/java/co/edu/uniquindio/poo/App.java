@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.scene.layout.AnchorPane;
-import java.time.Year;
 import co.edu.uniquindio.poo.model.*;
 import co.edu.uniquindio.poo.viewController.*;
 

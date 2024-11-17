@@ -1,7 +1,6 @@
 package co.edu.uniquindio.poo.controller;
 import java.util.Collection;
 import co.edu.uniquindio.poo.model.*;
-import co.edu.uniquindio.poo.App;
 
 
 public class HomeEmpleadoController {

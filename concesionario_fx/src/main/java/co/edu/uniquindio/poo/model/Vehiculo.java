@@ -137,6 +137,19 @@ public class Vehiculo implements Autonomia{
     public void setAño(int Año){
         this.año = año;
     }
+    @Override
+    public String toString() {
+        return "id=" + id + ", marca=" + marca + ", condicion=" + condicion + ", modelo=" + modelo + ", año="
+                + año + ", cambios=" + cambios + ", cilindraje=" + cilindraje + ", VelMaxima=" + VelMaxima
+                + ", numeroPasajeros=" + numeroPasajeros + ", precio=" + precio + ", tipoCombustible=" + tipoCombustible
+                + ", atributosCombustible=" + atributosCombustible.toString() + ", ";
+    }
+    @Override
+    public String toStringChiquito(){
+        return "marca: " + marca + ", "
+    }
+    
+    
     
 
 }

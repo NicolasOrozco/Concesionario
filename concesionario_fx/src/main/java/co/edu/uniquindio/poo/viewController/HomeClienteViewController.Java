@@ -11,8 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.controller.HomeClienteController;
+import co.edu.uniquindio.poo.model.Vehiculo;
+import co.edu.uniquindio.poo.model.Concesionario;
+import java.util.Collection;
+import javafx.collections.FXCollections;
 
 public class HomeClienteViewController {
+
+    HomeClienteController homeClienteController;
 
     App app;
     @FXML
@@ -28,7 +34,27 @@ public class HomeClienteViewController {
     private Label lblTitulo;
 
     @FXML
-    private ListView<String> listVehiculos;
+    void initialize() {
+        homeClienteController = new HomeClienteController(app.concesionario);
+        initView();
+    }
+
+    private void initView() {
+        initDataBinding();
+        obtenerVehiculos();
+        ListVehiculos.setItems(listVehiculos);
+        listenerSelection();
+    }
+
+    private Collection<Vehiculo> obtenerVehiculos() {
+        return app.concesionario.getVehiculos();
+    }
+
+    
+
+    @FXML
+    private ListView<Vehiculo> listVehiculos = FXCollections.ob(obtenerVehiculos());
+    
 
     @FXML
     void onCerrarSesion(ActionEvent event) {
@@ -37,7 +63,7 @@ public class HomeClienteViewController {
 
     @FXML
     void onVerDetalles(ActionEvent event) {
-
+        
     }
 
     public void setApp(App app) {

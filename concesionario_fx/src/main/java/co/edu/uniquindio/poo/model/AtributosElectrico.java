@@ -31,6 +31,11 @@ public class AtributosElectrico extends AtributosCombustible{
     public void setAutonomiaElectrica(int autonomiaElectrica) {
         this.autonomiaElectrica = autonomiaElectrica;
     }
+    @Override
+    public String toString() {
+        return super.toString() + "tiempoDeCarga=" + tiempoDeCarga + ", capacadadBateria=" + capacadadBateria
+                + ", autonomiaElectrica=" + autonomiaElectrica;
+    }
     
     
 }

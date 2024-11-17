@@ -13,6 +13,11 @@ public class AtributosCombustible{
     public void setAutonomia(String autonomia) {
         this.autonomia = autonomia;
     }
+    @Override
+    public String toString() {
+        return "autonomia=" + autonomia + ", ";
+    }
+    
 
     
     

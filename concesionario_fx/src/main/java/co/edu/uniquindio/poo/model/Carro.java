@@ -88,4 +88,14 @@ public class Carro extends Vehiculo{
     public void setTieneAsistenciaPermanenciaDeCarril(boolean tieneAsistenciaPermanenciaDeCarril) {
         this.tieneAsistenciaPermanenciaDeCarril = tieneAsistenciaPermanenciaDeCarril;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "numPuertas=" + numPuertas + ", tieneAireAcondicionado=" + tieneAireAcondicionado
+                + ", tieneCamaraDeReversa=" + tieneCamaraDeReversa + ", tieneControlCrucero=" + tieneControlCrucero
+                + ", tieneBolsaDeAire=" + tieneBolsaDeAire + ", tieneABS=" + tieneABS + ", tieneSensoresColision="
+                + tieneSensoresColision + ", tieneSensoresTraficoCruzado=" + tieneSensoresTraficoCruzado
+                + ", tieneAsistenciaPermanenciaDeCarril=" + tieneAsistenciaPermanenciaDeCarril + ", " ;
+    }
+    
 }

@@ -13,6 +13,10 @@ import javafx.fxml.FXML;
 
 public class AdministrarEmpleadosViewController {
 
+    App app;
+    @FXML
+    private URL location;
+
     @FXML
     private Label lblTitulo;
 
@@ -38,6 +42,10 @@ public class AdministrarEmpleadosViewController {
     @FXML
     void onDesactivar(ActionEvent event) {
 
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
     
 }

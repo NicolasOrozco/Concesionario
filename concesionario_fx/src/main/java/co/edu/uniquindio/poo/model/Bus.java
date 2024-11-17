@@ -24,4 +24,10 @@ public class Bus extends Carro{
     public void setNumSalidasDeEmergencia(int numSalidasDeEmergencia) {
         this.numSalidasDeEmergencia = numSalidasDeEmergencia;
     }
+
+    @Override
+    public String toString() {
+        return "Bus: " + super.toString() + "numEjes=" + numEjes + ", numSalidasDeEmergencia=" + numSalidasDeEmergencia ;
+    }
+    
 }

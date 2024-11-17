@@ -39,12 +39,12 @@ public class HomeAdministradorViewController {
 
     @FXML
     void onAdministrarEmpleados(ActionEvent event) {
-        
+        app.openCrearEmpleado();
     }
 
     @FXML
     void onHistorialTransacciones(ActionEvent event) {
-
+        app.openViewTransacciones();
     }
 
     public void setApp(App app) {

@@ -25,4 +25,10 @@ public class Suv extends Carro{
     public void setEs4x4(boolean es4x4) {
         this.es4x4 = es4x4;
     }
+
+    @Override
+    public String toString() {
+        return "Suv: " + super.toString() +"capacidadMaletero=" + capacidadMaletero + ", es4x4=" + es4x4 + "]";
+    }
+    
 }

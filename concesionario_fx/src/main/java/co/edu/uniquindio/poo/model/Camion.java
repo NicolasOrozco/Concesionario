@@ -35,4 +35,11 @@ public class Camion extends Vehiculo {
     public void setTipoCamion(String tipoCamion) {
         this.tipoCamion = tipoCamion;
     }
+
+    @Override
+    public String toString() {
+        return "Camion: " + super.toString() + "numEjes=" + numEjes + ", tieneFrenoDeAire=" + tieneFrenoDeAire + ", tipoCamion=" + tipoCamion
+                ;
+    }
+    
 }

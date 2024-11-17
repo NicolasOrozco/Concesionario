@@ -25,4 +25,10 @@ public class PickUp extends Carro{
     public void setEs4x4(boolean es4x4) {
         this.es4x4 = es4x4;
     }
+
+    @Override
+    public String toString() {
+        return "PickUp: " + super.toString() + "capacidadCaja=" + capacidadCaja + ", es4x4=" + es4x4 ;
+    }
+    
 }

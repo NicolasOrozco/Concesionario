@@ -13,6 +13,10 @@ import javafx.fxml.FXML;
 
 public class RecuperarContraseniaViewController {
     
+    App app;
+    @FXML
+    private URL location;
+
     @FXML
     private Button btnVolver;
 
@@ -45,6 +49,10 @@ public class RecuperarContraseniaViewController {
     @FXML
     void onVolver(ActionEvent event) {
 
+    }
+
+    public void setApp(App app){
+        this.app = app;
     }
 
 }

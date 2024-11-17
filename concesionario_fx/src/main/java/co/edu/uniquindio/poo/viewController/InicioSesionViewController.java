@@ -60,11 +60,11 @@ public class InicioSesionViewController {
         String sesion =inicioSesionController.inicioSesion(usuario, contraseña);
         switch ( sesion) {
             case "cliente":
-                app.openViewCliente();
+                app.openHomeCliente();
                 break;
         
             case "empleado":
-                app.openViewEmpleado();
+                app.openHomeEmpleado();
                 break;
             
             case "administrador":

@@ -46,7 +46,7 @@ public class App extends Application {
         }
     }
 
-    public void openViewCliente() {
+    public void openHomeCliente() {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(App.class.getResource("HomeCliente.fxml"));
@@ -63,7 +63,7 @@ public class App extends Application {
         }
     }
 
-    public void openViewEmpleado(){
+    public void openHomeEmpleado(){
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(App.class.getResource("HomeEmpleado.fxml"));
@@ -80,6 +80,23 @@ public class App extends Application {
         }
     }   
 
+    public void openAdministrarEmpleados(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("AdministrarEmpleados.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            AdministrarEmpleadosViewController administrarEmpleadosViewController = loader.getController();
+            administrarEmpleadosViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     public void openViewAdministrador(){
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -87,6 +104,75 @@ public class App extends Application {
             AnchorPane rootLayout = (AnchorPane) loader.load();
             HomeAdministradorViewController homeAdministradorViewController = loader.getController();
             homeAdministradorViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openCrearEmpleado(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("CrearEmpleado.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            CrearEmpleadoViewController crearEmpleadoViewController = loader.getController();
+            crearEmpleadoViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    
+    public void openEditarEmpleado(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("EditarEmpleado.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            EditarEmpleadoViewController editarEmpleadoViewController = loader.getController();
+            editarEmpleadoViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    
+     public void openViewTransacciones(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("HistorialTransacciones.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            HomeAdministradorViewController homeAdministradorViewController = loader.getController();
+            homeAdministradorViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+     public void openRecuperarContrasenia(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("RecuperarContrasenia.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            RecuperarContraseniaViewController recuperarContraseniaViewController = loader.getController();
+            recuperarContraseniaViewController.setApp(this);
 
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -111,8 +197,6 @@ public class App extends Application {
         suv0.setAtributosCombustible(new AtributosCombustible());
         concesionario.agregarVehiculo(suv0);
     }
-
-
     public static void main(String[] args) {
         launch();
     }

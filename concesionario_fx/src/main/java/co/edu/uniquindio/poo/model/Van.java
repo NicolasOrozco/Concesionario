@@ -16,5 +16,10 @@ public class Van extends Carro {
         this.tipoDeVan = tipoDeVan;
     }
 
+    @Override
+    public String toString() {
+        return "Van: "+ super.toString() + "tipoDeVan=" + tipoDeVan;
+    }
+    
     
 }

@@ -13,6 +13,8 @@ import javafx.fxml.FXML;
 
 public class EditarEmpleadoViewController {
     
+    App app;
+
     @FXML
     private Button btnCrearEmpleado;
 
@@ -60,6 +62,10 @@ public class EditarEmpleadoViewController {
     @FXML
     void onVolver(ActionEvent event) {
 
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
 
 }

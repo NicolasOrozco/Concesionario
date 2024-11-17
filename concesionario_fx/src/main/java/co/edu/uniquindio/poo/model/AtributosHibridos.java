@@ -25,5 +25,11 @@ public class AtributosHibridos extends AtributosCombustible {
     public void setEsHibridoLigero(boolean esHibridoLigero) {
         this.esHibridoLigero = esHibridoLigero;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "es Enchufable=" + esEnchufable + ", es Hibrido Ligero=" + esHibridoLigero ;
+    }
+    
     
 }

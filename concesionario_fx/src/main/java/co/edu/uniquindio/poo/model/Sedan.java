@@ -15,4 +15,10 @@ public class Sedan extends Carro{
     public void setCapacidadMaletero(double capacidadMaletero) {
         this.capacidadMaletero = capacidadMaletero;
     }
+
+    @Override
+    public String toString() {
+        return "Sedan: " + super.toString() + "capacidadMaletero=" + capacidadMaletero;
+    }
+    
 }

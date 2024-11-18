@@ -74,14 +74,11 @@ public class HomeClienteViewController {
     }
 
     private void initDataBinding() {
-        tbcTipoVehiculo
-                .setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().obtenerTipoVehiculo()));
+        tbcTipoVehiculo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().obtenerTipoVehiculo()));
         tbcMarca.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMarca()));
         tbcModelo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModelo()));
-        tbcTipoCombustible.setCellValueFactory(
-                cellData -> new SimpleStringProperty(cellData.getValue().getTipoCombustible().toString()));
-        tbcPrecio
-                .setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
+        tbcTipoCombustible.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTipoCombustible().toString()));
+        tbcPrecio.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
 
     }
 

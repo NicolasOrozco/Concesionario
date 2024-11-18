@@ -11,7 +11,7 @@ public abstract class Transaccion {
 
     public Transaccion() {
         fecha = LocalDate.now();
-        valor = calcularValor();
+        valor = 0.0;
     }
     public abstract double calcularValor();
 

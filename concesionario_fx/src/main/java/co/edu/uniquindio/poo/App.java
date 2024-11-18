@@ -279,6 +279,22 @@ public class App extends Application {
         suv0.setAtributosCombustible(new AtributosCombustible());
         concesionario.agregarVehiculo(suv0);
 
+        Suv suv1 = new Suv("suv1", "Toyota", "Nuevo", "Fortuner", 2023, Transmision.AUTOMATICO, 15, 4500, 175, 7, TipoCombustible.GASOLINA, 5, true, true, false, true, false, true, true, false, 2, true, 280000000, Disponibilidad.DISPONIBLE);
+        suv1.setAtributosCombustible(new AtributosCombustible());
+        concesionario.agregarVehiculo(suv1);
+
+        Suv suv2 = new Suv("suv2", "Mazda", "Usado", "CX-5", 2020, Transmision.MANUAL, 25, 3800, 165, 5, TipoCombustible.GASOLINA, 4, true, false, false, true, true, false, true, true, 1, false, 190000000, Disponibilidad.DISPONIBLE);
+        suv2.setAtributosCombustible(new AtributosCombustible());
+        concesionario.agregarVehiculo(suv2);
+
+        Suv suv3 = new Suv("suv3", "Hyundai", "Nuevo", "Santa Fe", 2024, Transmision.AUTOMATICO, 12, 4800, 170, 6, TipoCombustible.HIBRIDO, 4, true, true, true, true, true, true, true, true, 3, true, 330000000, Disponibilidad.DISPONIBLE);
+        suv3.setAtributosCombustible(new AtributosCombustible());
+        concesionario.agregarVehiculo(suv3);
+
+        Deportivo deportivo1 = new Deportivo("deportivo1", "Ferrari", "Nuevo", "488 Pista", 2024, Transmision.AUTOMATICO, 7, 3902, 340, 2, TipoCombustible.GASOLINA, 2, true, true, true, true, true, true, true, true, 720, 2.85, 1200000000, Disponibilidad.DISPONIBLE); 
+        concesionario.agregarVehiculo(deportivo1);
+
+
     }
     public static void main(String[] args) {
         launch();

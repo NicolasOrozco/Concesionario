@@ -87,7 +87,7 @@ public class VentaViewController {
 
     private void initView() {
     initDataBinding();
-    cargarVehiculos(); // Llenar la tabla con los datos
+    cargarVehiculos();
     tblVehiculos.setItems(listVehiculos);
     listenerSelection();
     }
@@ -106,9 +106,6 @@ public class VentaViewController {
         tbcPrecio.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
 
     }
-
-    // tbcCedula.setCellValueFactory(cellData -> new
-    // SimpleStringProperty(cellData.getValue().getCedula()));
 
 
     private void cargarVehiculos() {

@@ -17,6 +17,7 @@ public class VentaController {
         Venta venta = new Venta();
         venta.setVehiculo(vehiculo);
         venta.calcularValor();
+        venta.setValor(venta.calcularValor());
         venta.setCliente(concesionario.buscarCliente(idCliente));
         venta.setEmpleado(concesionario.buscarEmpleado(idEmpleado));
         concesionario.transacciones.add(venta);

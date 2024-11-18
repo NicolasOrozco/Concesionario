@@ -73,7 +73,7 @@
         }
 
         public void agregarEmpleado(Empleado empleado) {
-            if (!verificarEmpleado(empleado.getId())|| !verificarEmpleadoBlacklist(empleado.getId())) {
+            if (!verificarEmpleado(empleado.getId()) && !verificarEmpleadoBlacklist(empleado.getId())) {
                 empleados.add(empleado);
 
             }

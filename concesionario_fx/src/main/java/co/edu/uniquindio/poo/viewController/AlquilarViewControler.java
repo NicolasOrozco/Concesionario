@@ -76,12 +76,12 @@ public class AlquilarViewControler {
 
     @FXML
     void onCerrarSesion(ActionEvent event) {
-
+        app.openViewPrincipal();
     }
 
     @FXML
     void onAlquilar(ActionEvent event) {
-
+        
     }
     
     @FXML

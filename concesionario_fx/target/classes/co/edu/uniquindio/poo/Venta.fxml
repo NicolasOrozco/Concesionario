@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.HomeClienteViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.VentaViewController">
    <children>
       <Button fx:id="btnCerrarSesion" layoutX="834.0" layoutY="1.0" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="39.0" prefWidth="147.0" text="Cerrar Sesión">
          <cursor>

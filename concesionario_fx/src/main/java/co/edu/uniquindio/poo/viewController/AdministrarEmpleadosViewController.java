@@ -1,20 +1,43 @@
 package co.edu.uniquindio.poo.viewController;
 
-import javafx.event.ActionEvent;
+import co.edu.uniquindio.poo.model.Empleado;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import co.edu.uniquindio.poo.App;
-import java.net.URL;
+import co.edu.uniquindio.poo.controller.AdministrarEmpleadosController;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import java.util.Collection;
+import co.edu.uniquindio.poo.controller.*;
+
+
 
 public class AdministrarEmpleadosViewController {
 
-    App app;
+    private App app;
+    AdministrarEmpleadosController administrarEmpleadosController;
+    ObservableList<Empleado> listEmpleados = FXCollections.observableArrayList();
+    Empleado selectedEmpleado;
+
     @FXML
-    private URL location;
+    private TableColumn<Empleado, String> tbcId;
+
+    @FXML
+    private TableView<Empleado> tblEmpleados;
+
+    @FXML
+    private Button btnVolver;
 
     @FXML
     private Label lblTitulo;
+
+    @FXML
+    private TableColumn<Empleado, String> tbcNombre;
 
     @FXML
     private Button btnCrear;
@@ -26,22 +49,56 @@ public class AdministrarEmpleadosViewController {
     private Button btnDesactivar;
 
     @FXML
-    void onEditar(ActionEvent event) {
-
+    void onVolver() {
+        app.openViewAdministrador();
     }
 
     @FXML
-    void onCrear(ActionEvent event) {
-
+    void onEditar() {
+        app.openEditarEmpleado();
     }
 
     @FXML
-    void onDesactivar(ActionEvent event) {
+    void onCrear() {
+        app.openCrearEmpleado();
+    }
 
+    @FXML
+    void initialize() {
+        administrarEmpleadosController = new AdministrarEmpleadosController(app.concesionario);
+        initView();
+    }
+
+    @FXML
+    void onDesactivar() {
+        administrarEmpleadosController.banearEmpleado(selectedEmpleado.getId());
+    }
+    
+    private void cargarEmpleados() {
+    Collection<Empleado> empleados = administrarEmpleadosController.obtenerListaEmpleados();
+    listEmpleados.setAll(empleados);
+    }
+    
+
+    public void initView(){
+        initDataBinding();
+        cargarEmpleados();
+        tblEmpleados.setItems(listEmpleados);
+        listenerSelection();
+    }
+    private void listenerSelection(){
+        tblEmpleados.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            selectedEmpleado = newSelection;
+        });
+    }
+
+    private void initDataBinding() {
+        tbcId.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
+        tbcNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
     }
 
     public void setApp(App app) {
         this.app = app;
     }
-    
+
 }

@@ -6,8 +6,15 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import co.edu.uniquindio.poo.model.*;
+import co.edu.uniquindio.poo.controller.ComprarVehiculoController;
+import co.edu.uniquindio.poo.App;
+
 
 public class ComprarVehiculoViewController {
+
+    ComprarVehiculoController comprarVehiculoController;
+
+    private App app;
 
     @FXML
     private ComboBox<String> tipoVehiculoCombo;
@@ -29,6 +36,8 @@ public class ComprarVehiculoViewController {
 
     @FXML
     public void initialize() {
+
+        comprarVehiculoController = new ComprarVehiculoController(app.concesionario); 
         // Inicializar ComboBox de tipo de vehículo
         tipoVehiculoCombo.getItems().addAll("Moto", "Bus", "Camion", "Deportivo", "PickUp", "Sedan", "Suv", "Van");
         tipoCombustibleCombo.getItems().addAll(TipoCombustible.values());
@@ -180,6 +189,10 @@ public class ComprarVehiculoViewController {
             }
         }
         return false;
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
 }
 

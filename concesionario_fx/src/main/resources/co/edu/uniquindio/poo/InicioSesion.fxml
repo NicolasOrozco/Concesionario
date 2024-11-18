@@ -19,11 +19,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="txfUsuario" layoutX="570.0" layoutY="318.0" prefHeight="36.0" prefWidth="406.0" promptText="Usuario">
+      <TextField fx:id="txfUsuario" layoutX="570.0" layoutY="236.0" prefHeight="36.0" prefWidth="406.0" promptText="Usuario">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <TextField fx:id="txfContraseña" layoutX="570.0" layoutY="257.0" prefHeight="36.0" prefWidth="406.0" promptText="Contraseña">
+      <TextField fx:id="txfContraseña" layoutX="571.0" layoutY="300.0" prefHeight="36.0" prefWidth="406.0" promptText="Contraseña">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>

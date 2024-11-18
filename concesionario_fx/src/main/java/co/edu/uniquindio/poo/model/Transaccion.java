@@ -1,12 +1,16 @@
 package co.edu.uniquindio.poo.model;
 
+import java.time.LocalDate;
+
 public abstract class Transaccion {
-     Vehiculo vehiculo;
+    LocalDate fecha; 
+    Vehiculo vehiculo;
      Empleado empleado;
      Cliente cliente;
      Double valor;
 
     public Transaccion() {
+        fecha = LocalDate.now();
     }
     public abstract double calcularValor();
 

@@ -10,7 +10,7 @@
 		private Collection<Administrador> administradores;
         private Collection<Cliente> clientes;
         private Collection<Vehiculo> vehiculos;
-        private Collection<Transaccion> transacciones;
+        public Collection<Transaccion> transacciones;
 
         public Concesionario(String nombre) {
             this.nombre = nombre;
@@ -101,6 +101,18 @@
                 if(empleado.getId().equals(id)){
                    blacklist.add(empleado);
                    empleados.remove(empleado);
+                }
+            }
+        }
+
+        public void editarEmpleado(String id, Empleado actualizado){
+            for (Empleado empleado : empleados) {
+                if (empleado.getId().equals(id)) {
+                    empleado.setNombre(actualizado.getNombre());
+                    empleado.setId(actualizado.getId());
+                    empleado.setPreguntaSeguridad(actualizado.getPreguntaSeguridad());
+                    empleado.setRespuesta(actualizado.getRespuesta());
+                    break;
                 }
             }
         }

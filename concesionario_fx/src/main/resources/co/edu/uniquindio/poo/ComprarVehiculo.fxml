@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_LEFT" minHeight="600.0" minWidth="1000.0" spacing="10" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ControladorVehiculos">
+<VBox alignment="TOP_LEFT" minHeight="600.0" minWidth="1000.0" spacing="10" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController" >
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="55.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
         <!-- Sección de selección del tipo de vehículo y combustible -->

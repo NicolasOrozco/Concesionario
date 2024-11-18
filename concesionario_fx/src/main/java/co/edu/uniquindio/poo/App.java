@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+
 import co.edu.uniquindio.poo.model.*;
 import co.edu.uniquindio.poo.viewController.*;
 
@@ -24,7 +26,7 @@ public class App extends Application {
 		this.primaryStage.setTitle("Inicio de sesion");
         openViewPrincipal();
     }
-
+    
 
 
     public void openViewPrincipal() {
@@ -78,6 +80,22 @@ public class App extends Application {
             e.printStackTrace();
         }
     }   
+    public void openComprarVehiculo() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarVehiculo.fxml"));
+            VBox rootLayout = (VBox) loader.load();
+            ComprarVehiculoViewController comprarVehiculoViewController = loader.getController();
+            comprarVehiculoViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
     public void openAdministrarEmpleados(){
         try {
@@ -130,7 +148,23 @@ public class App extends Application {
         }
     }
 
-    
+    public void openCrearClientes(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("CrearCliente.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            CrearClienteViewController crearClienteViewController = loader.getController();
+            crearClienteViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     public void openEditarEmpleado(){
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -147,15 +181,62 @@ public class App extends Application {
             e.printStackTrace();
         }
     }
+    public void openRealizarTransacciones(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("RealizarTransaccion.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            RealizarTransaccionViewController realizarTransaccionViewController = loader.getController();
+            realizarTransaccionViewController.setApp(this);
 
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
     
      public void openViewTransacciones(){
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(App.class.getResource("HistorialTransacciones.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader.load();
-            HomeAdministradorViewController homeAdministradorViewController = loader.getController();
-            homeAdministradorViewController.setApp(this);
+            HistorialTransaccionesViewController historialTransaccionesViewController = loader.getController();
+            historialTransaccionesViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void openAlquilar(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("Alquiler.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            AlquilarViewControler alquilarViewControler = loader.getController();
+            alquilarViewControler.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void openVender(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("Venta.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            VentaViewController ventaViewController = loader.getController();
+            ventaViewController.setApp(this);
 
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -192,7 +273,7 @@ public class App extends Application {
         concesionario.agregarEmpleado(empleado0);
         Administrador administrador0 = new Administrador("Jose", "admin", "admin", "¿cual es el palindromo de su 2do apellido", "anipso");
         concesionario.agregarAdminsitrador(administrador0);
-        Suv suv0 = new Suv("suv0", "Chevrolet", "Nuevo", "Tahoe",2024,Transmision.AUTOMATICO, 10, 5200, 180,  5, TipoCombustible.DIESEL, 4, true, true, true, true, true, true, true, true, 2, true, 300000000);
+        Suv suv0 = new Suv("suv0", "Chevrolet", "Nuevo", "Tahoe",2024,Transmision.AUTOMATICO, 10, 5200, 180,  5, TipoCombustible.DIESEL, 4, true, true, true, true, true, true, true, true, 2, true, 350000000);
         suv0.setAtributosCombustible(new AtributosCombustible());
         concesionario.agregarVehiculo(suv0);
     }

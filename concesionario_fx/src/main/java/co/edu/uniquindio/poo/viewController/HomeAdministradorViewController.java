@@ -38,7 +38,7 @@ public class HomeAdministradorViewController {
 
     @FXML
     void onAdministrarEmpleados(ActionEvent event) {
-        app.openCrearEmpleado();
+        app.openAdministrarEmpleados();
     }
 
     @FXML

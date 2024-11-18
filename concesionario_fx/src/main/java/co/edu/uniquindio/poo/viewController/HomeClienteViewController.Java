@@ -18,7 +18,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
 public class HomeClienteViewController {
-
+    
     HomeClienteController homeClienteController;
     ObservableList<Vehiculo> listVehiculos = FXCollections.observableArrayList();
     private App app;
@@ -85,14 +85,11 @@ public class HomeClienteViewController {
 
     }
 
-    // tbcCedula.setCellValueFactory(cellData -> new
-    // SimpleStringProperty(cellData.getValue().getCedula()));
-
 
     private void cargarVehiculos() {
     Collection<Vehiculo> vehiculos = homeClienteController.ObtenerVehiculos();
     listVehiculos.setAll(vehiculos);
-}
+    }
 
     @FXML
     void onCerrarSesion(ActionEvent event) {

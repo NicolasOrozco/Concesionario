@@ -6,9 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import co.edu.uniquindio.poo.App;
+import co.edu.uniquindio.poo.model.Empleado;
+import co.edu.uniquindio.poo.controller.EditarEmpleadoController;
 
 public class EditarEmpleadoViewController {
     
+    EditarEmpleadoController editarEmpleadoController;
     App app;
 
     @FXML
@@ -52,12 +55,15 @@ public class EditarEmpleadoViewController {
 
     @FXML
     void onCrearEmpleado(ActionEvent event) {
-
+        Empleado actualizado = new Empleado(txfNombre.getText(), txfCdeula.getText(), txfContrasenia.getText(), txfPregunta.getText(), txfRespuesta.getText());
+        editarEmpleadoController.editarEmpleado(txfCdeula.getText(), actualizado);
+        app.openAdministrarEmpleados();
+        
     }
 
     @FXML
     void onVolver(ActionEvent event) {
-
+        app.openAdministrarEmpleados();
     }
 
     public void setApp(App app) {

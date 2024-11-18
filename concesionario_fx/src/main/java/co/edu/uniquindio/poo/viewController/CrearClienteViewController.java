@@ -1,11 +1,23 @@
 package co.edu.uniquindio.poo.viewController;
+import co.edu.uniquindio.poo.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import co.edu.uniquindio.poo.App;
+import co.edu.uniquindio.poo.controller.CrearClienteController;
+import co.edu.uniquindio.poo.model.Cliente;
+
+import java.net.URL;
 
 public class CrearClienteViewController {
+    CrearClienteController crearClienteController;
+    private App app;
+    @FXML
+    private URL location;
+
+    
     
     @FXML
     private Label lblNombre;
@@ -48,12 +60,22 @@ public class CrearClienteViewController {
 
     @FXML
     void onCrearCliente(ActionEvent event) {
-        
+        crearClienteController.crearCliente(new Cliente(txfNombre.getText(), txfCdeula.getText(), txfContrasenia.getText(), txfPregunta.getText(), txfRespuesta.getText()));
+        app.openAdministrarEmpleados();
     }
 
     @FXML
     void onVolver(ActionEvent event) {
+        app.openAdministrarEmpleados();
+    }
 
+    @FXML
+    void initialize() {
+        crearClienteController = new CrearClienteController(app.concesionario);
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
 
 }

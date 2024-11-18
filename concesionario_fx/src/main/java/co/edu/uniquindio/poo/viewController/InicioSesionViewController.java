@@ -43,7 +43,7 @@ public class InicioSesionViewController {
 
     @FXML
     void onRecuperarContrasenia(ActionEvent event){
-
+        app.openRecuperarContrasenia();
     }
 
     @FXML

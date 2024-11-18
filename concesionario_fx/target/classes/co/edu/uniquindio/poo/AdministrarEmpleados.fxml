@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.AdministrarEmpleadosViewController">
    <children>
-      <AnchorPane layoutY="44.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
+      <AnchorPane layoutY="42.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
          <children>
             <Label fx:id="lblTitulo" layoutX="344.0" text="LISTA DE EMPLEADOS" textFill="WHITE">
                <font>
@@ -19,10 +19,16 @@
             <Line endX="100.0" layoutX="102.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="896.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="759.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <ListView layoutX="21.0" layoutY="54.0" prefHeight="421.0" prefWidth="966.0" />
-            <Button fx:id="btnEditar" layoutX="147.0" layoutY="480.0" mnemonicParsing="false" onAction="#onEditar" prefHeight="30.0" prefWidth="113.0" text="Editar" />
-            <Button fx:id="btnCrear" layoutX="703.0" layoutY="480.0" mnemonicParsing="false" onAction="#onCrear" prefHeight="30.0" prefWidth="113.0" text="Crear" />
-            <Button fx:id="btnDesactivar" layoutX="438.0" layoutY="480.0" mnemonicParsing="false" onAction="#onDesactivar" prefHeight="30.0" prefWidth="132.0" text="Desactivar Usuario" />
+            <Button fx:id="btnEditar" layoutX="687.0" layoutY="143.0" mnemonicParsing="false" onAction="#onEditar" prefHeight="46.0" prefWidth="271.0" text="Editar" />
+            <Button fx:id="btnCrear" layoutX="687.0" layoutY="331.0" mnemonicParsing="false" onAction="#onCrear" prefHeight="46.0" prefWidth="271.0" text="Crear" />
+            <Button fx:id="btnDesactivar" layoutX="687.0" layoutY="238.0" mnemonicParsing="false" onAction="#onDesactivar" prefHeight="46.0" prefWidth="271.0" text="Desactivar Usuario" />
+            <TableView fx:id="tblEmpleados" layoutX="88.0" layoutY="89.0" prefHeight="389.0" prefWidth="513.0">
+               <columns>
+                  <TableColumn fx:id="tbcNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="tbcId" prefWidth="75.0" text="Id" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnVolver" layoutX="896.0" layoutY="462.0" mnemonicParsing="false" text="Volver" />
          </children>
       </AnchorPane>
    </children>

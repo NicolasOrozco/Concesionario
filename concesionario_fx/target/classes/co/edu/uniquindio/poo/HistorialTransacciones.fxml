@@ -26,13 +26,13 @@
             <Line endX="100.0" layoutX="170.0" layoutY="27.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="831.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="898.0" layoutY="26.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <TableView layoutX="22.0" layoutY="56.0" prefHeight="452.0" prefWidth="957.0">
+            <TableView fx:id="tblTransacciones" layoutX="22.0" layoutY="56.0" prefHeight="452.0" prefWidth="957.0">
               <columns>
-                <TableColumn prefWidth="177.0" text="Fecha" />
-                <TableColumn prefWidth="199.0" text="Transacción" />
-                  <TableColumn prefWidth="188.0" text="Empleado" />
-                  <TableColumn prefWidth="206.0" text="Cliente" />
-                  <TableColumn prefWidth="186.0" text="Valor" />
+                <TableColumn fx:id="tbcFecha" prefWidth="177.0" text="Fecha" />
+                <TableColumn fx:id="tbcTransaccion" prefWidth="199.0" text="Transacción" />
+                  <TableColumn fx:id="tbcEmpleado" prefWidth="188.0" text="Empleado" />
+                  <TableColumn fx:id="tbcCliente" prefWidth="206.0" text="Cliente" />
+                  <TableColumn fx:id="tbcValor" prefWidth="186.0" text="Valor" />
               </columns>
             </TableView>
          </children>

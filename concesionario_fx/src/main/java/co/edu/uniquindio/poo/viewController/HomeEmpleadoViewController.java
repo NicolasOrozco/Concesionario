@@ -47,22 +47,22 @@ public class HomeEmpleadoViewController {
 
     @FXML
     void onRealizarTransaccion(ActionEvent event) {
-        
+        app.openRealizarTransacciones();
     }
 
     @FXML
     void onComprarVehiculos(ActionEvent event) {
-
+        app.openComprarVehiculo();
     }
 
     @FXML
     void onAgregarClientes(ActionEvent event) {
-
+        app.openCrearClientes();
     }
 
     @FXML
     void onCerrarSesion(ActionEvent event) {
-
+        app.openViewPrincipal();
     }
 
     public void setApp(App app) {

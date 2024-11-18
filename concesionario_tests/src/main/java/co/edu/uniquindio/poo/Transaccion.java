@@ -7,6 +7,7 @@ public abstract class Transaccion {
      Double valor;
 
     public Transaccion() {
+        
     }
     public abstract double calcularValor();
 

@@ -19,6 +19,7 @@ public class VentaController {
         venta.calcularValor();
         venta.setCliente(concesionario.buscarCliente(idCliente));
         venta.setEmpleado(concesionario.buscarEmpleado(idEmpleado));
+        concesionario.transacciones.add(venta);
         
     }
 

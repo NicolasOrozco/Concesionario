@@ -87,6 +87,7 @@ public class AlquilarViewControler {
     @FXML
     void onAlquilar(ActionEvent event) {
         alquilarController.alquilar(selectedVehiculo, txfCedulaCliente.getText(), txfCedulaEmpleado.getText(),Integer.parseInt(txfDias.getText()));
+        initDataBinding();
     }
     @FXML 
     void onVolver(ActionEvent event){

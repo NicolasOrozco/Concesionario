@@ -16,6 +16,7 @@ public class AlquilarController {
         alquiler.setCliente(concesionario.buscarCliente(idCliente));
         alquiler.setVehiculo(vehiculo);
         alquiler.setEmpleado(concesionario.buscarEmpleado(idEmpleado));
+        alquiler.calcularValor();
         alquiler.setFechaInicio(LocalDate.now());
         alquiler.setFechaLimite(LocalDate.now().plusDays(dias));
         concesionario.agregarTransaccion(alquiler);

@@ -76,7 +76,7 @@ public class VentaViewController {
 
     @FXML
     void onVender(ActionEvent event) {
-        
+        ventaController.vender(selectedVehiculo, btnCedulaEmpleado.getText(), btnCedulaCliente.getText()) ;
     }
 
     @FXML
@@ -120,12 +120,6 @@ public class VentaViewController {
     void onCerrarSesion(ActionEvent event) {
         app.openHomeEmpleado();
     }
-
-    @FXML
-    void onVerDetalles(ActionEvent event) {
-        
-    }
-
 
     public void setApp(App app) {
         this.app = app;

@@ -46,5 +46,10 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
          </font>
       </Label>
+      <Button fx:id="btnVolver" layoutX="639.0" layoutY="430.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="39.0" prefWidth="256.0" text="Volver">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

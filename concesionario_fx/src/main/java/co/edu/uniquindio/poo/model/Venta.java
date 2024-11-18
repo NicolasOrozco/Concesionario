@@ -2,6 +2,7 @@ package co.edu.uniquindio.poo.model;
 
 public class Venta extends Transaccion {
 
+    public Venta(){};
     @Override
     public double calcularValor() {
         return vehiculo.getPrecio();
@@ -11,6 +12,8 @@ public class Venta extends Transaccion {
     public String obtenerTipoTransaccion() {
         return "Venta";
     }
+
+
     
     
 

@@ -34,6 +34,9 @@ public class RealizarTransaccionViewController {
     private Label lblSeleccionarOpcion;
 
     @FXML
+    private Button btnVolver;
+
+    @FXML
     void onAlquilar(ActionEvent event) {
         app.openAlquilar();
     }
@@ -46,6 +49,11 @@ public class RealizarTransaccionViewController {
     @FXML
     void initialize() {
         realizarTransaccionController = new RealizarTransaccionController(app.concesionario);
+    }
+
+    @FXML
+    void onVolver(ActionEvent event) {
+        app.openHomeEmpleado();
     }
 
     public void setApp(App app){

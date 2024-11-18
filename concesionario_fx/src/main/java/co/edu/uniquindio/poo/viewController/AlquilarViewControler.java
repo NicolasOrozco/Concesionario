@@ -28,21 +28,13 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class AlquilarViewControler {
-    AlquilarController alquilarController;
-    ObservableList<Vehiculo> listVehiculos = FXCollections.observableArrayList();
+    private AlquilarController alquilarController;
+    private ObservableList<Vehiculo> listVehiculos = FXCollections.observableArrayList();
+    private Vehiculo selectedVehiculo;
     private App app;
-    Vehiculo selectedVehiculo;
-    @FXML
-    private Button btnAlquilar;
-
-    ObservableList<Empleado> listEmpleados = FXCollections.observableArrayList();
-    Empleado selectedEmpleado;
-
 
     @FXML
-    void onCerrarSesion(ActionEvent event) {
-        app.openViewPrincipal();
-    }
+    private TableView<Vehiculo> tblVehiculos;
 
     @FXML
     private TableColumn<Vehiculo, String> tbcTipoVehiculo;
@@ -51,42 +43,46 @@ public class AlquilarViewControler {
     private TableColumn<Vehiculo, String> tbcMarca;
 
     @FXML
-    private Label lblDias;
-
-    @FXML
-    private Button btnVolver;
-
-    @FXML
-    private Label lblTitulo;
-
-    @FXML
-    private TableView<Vehiculo> tblVehiculos;
-
-    @FXML
-    private Label lblCedulaCliente;
-
-    @FXML
-    private TableColumn<Transaccion, Double> tbcPrecio;
-
-    @FXML
-    private TextField txfDias;
-
-    @FXML
-    private Label lblCedulaEmpleado;
+    private TableColumn<Vehiculo, String> tbcModelo;
 
     @FXML
     private TableColumn<Vehiculo, String> tbcTipoCombustible;
 
     @FXML
-    private TableColumn<Vehiculo, String> tbcModelo;
+    private TableColumn<Vehiculo, Double> tbcPrecio;
+
+    @FXML
+    private Label lblTitulo;
+
+    @FXML
+    private Label lblCedulaCliente;
+
+    @FXML
+    private Label lblCedulaEmpleado;
+
+    @FXML
+    private Label lblDias;
+
+    @FXML
+    private TextField txfCedulaCliente;
 
     @FXML
     private TextField txfCedulaEmpleado;
 
-   @FXML
-   private TextField txfCedulaCliente; 
+    @FXML
+    private TextField txfDias;
 
-   
+    @FXML
+    private Button btnAlquilar;
+
+    @FXML
+    private Button btnVolver;
+
+
+    @FXML
+    void onCerrarSesion(ActionEvent event) {
+        app.openViewPrincipal();
+    }
 
     @FXML
     void onAlquilar(ActionEvent event) {
@@ -122,7 +118,7 @@ public class AlquilarViewControler {
         tbcMarca.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMarca()));
         tbcModelo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModelo()));
         tbcTipoCombustible.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTipoCombustible().toString()));
-        tbcPrecio.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValor()/250));
+        tbcPrecio.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getPrecio()/250.0));
 
     }
 

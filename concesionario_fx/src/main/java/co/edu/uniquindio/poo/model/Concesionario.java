@@ -34,7 +34,7 @@
 
         public boolean verificarEmpleadoBlacklist(String id){
             boolean estaEmpleado = false;
-            for (Empleado empleado : empleados) {
+            for (Empleado empleado : blacklist) {
                 if (empleado.getId().equals(id)) {
                     estaEmpleado = true;
                 }

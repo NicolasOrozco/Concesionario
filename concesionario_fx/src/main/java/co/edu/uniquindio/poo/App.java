@@ -275,7 +275,7 @@ public class App extends Application {
         concesionario.agregarEmpleado(empleado0);
         Administrador administrador0 = new Administrador("Jose", "admin", "admin", "¿cual es el palindromo de su 2do apellido", "anipso");
         concesionario.agregarAdminsitrador(administrador0);
-        Suv suv0 = new Suv("suv0", "Chevrolet", "Nuevo", "Tahoe",2024,Transmision.AUTOMATICO, 10, 5200, 180,  5, TipoCombustible.DIESEL, 4, true, true, true, true, true, true, true, true, 2, true, 350000000);
+        Suv suv0 = new Suv("suv0", "Chevrolet", "Nuevo", "Tahoe",2024,Transmision.AUTOMATICO, 10, 5200, 180,  5, TipoCombustible.DIESEL, 4, true, true, true, true, true, true, true, true, 2, true, 350000000, Disponibilidad.DISPONIBLE);
         suv0.setAtributosCombustible(new AtributosCombustible());
         concesionario.agregarVehiculo(suv0);
 

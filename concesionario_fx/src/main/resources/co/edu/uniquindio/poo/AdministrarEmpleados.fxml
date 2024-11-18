@@ -24,8 +24,8 @@
             <Button fx:id="btnDesactivar" layoutX="687.0" layoutY="238.0" mnemonicParsing="false" onAction="#onDesactivar" prefHeight="46.0" prefWidth="271.0" text="Desactivar Usuario" />
             <TableView fx:id="tblEmpleados" layoutX="88.0" layoutY="89.0" prefHeight="389.0" prefWidth="513.0">
                <columns>
-                  <TableColumn fx:id="tbcNombre" prefWidth="75.0" text="Nombre" />
-                  <TableColumn fx:id="tbcId" prefWidth="75.0" text="Id" />
+                  <TableColumn fx:id="tbcNombre" prefWidth="328.0" text="Nombre" />
+                  <TableColumn fx:id="tbcId" minWidth="0.0" prefWidth="183.0" text="Id" />
                </columns>
             </TableView>
             <Button fx:id="btnVolver" layoutX="896.0" layoutY="462.0" mnemonicParsing="false" onAction="#onVolver" text="Volver" />

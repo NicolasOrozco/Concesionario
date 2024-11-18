@@ -178,7 +178,7 @@ public class ComprarVehiculoViewController {
                 int numEjes = Integer.parseInt(getValorCampo("numEjes"));
                 boolean tieneFrenoDeAire = getValorCheckbox("tieneFrenoDeAire");
                 String tipoCamion = getValorCampo("tipoCamion");
-                Camion camion = new Camion(id, marca, "Nueva", modelo, año, transmision, cambios, cilindraje, velMaxima, numeroPasajeros, tipoCombustible, numEjes, tieneFrenoDeAire, tipoCamion, precio);
+                Camion camion = new Camion(id, marca, "Nueva", modelo, año, transmision, cambios, cilindraje, velMaxima, numeroPasajeros, tipoCombustible, numEjes, tieneFrenoDeAire, tipoCamion, precio, Disponibilidad.DISPONIBLE);
                 // Agregar el objeto al concesionario
                 break;
             // Más casos para otros vehículos...

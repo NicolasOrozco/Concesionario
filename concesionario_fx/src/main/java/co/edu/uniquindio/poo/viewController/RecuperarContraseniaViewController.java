@@ -7,11 +7,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
+import co.edu.uniquindio.poo.controller.CrearClienteController;
 import co.edu.uniquindio.poo.controller.InicioSesionController;
+import co.edu.uniquindio.poo.controller.RecuperarContraseniaController;
+
 import java.net.URL;
 import javafx.fxml.FXML;
 
 public class RecuperarContraseniaViewController {
+    RecuperarContraseniaController recuperarContraseniaController;
+
     
     App app;
     @FXML
@@ -43,12 +48,16 @@ public class RecuperarContraseniaViewController {
 
     @FXML
     void onAceptar(ActionEvent event) {
-
+        recuperarContraseniaController.recuperarContrasenia(txfNuevaContrasenia.getText(), "", txfRespuesta.getText());
+    }
+    @FXML
+    void initialize() {
+        recuperarContraseniaController = new RecuperarContraseniaController(app.concesionario);
     }
 
     @FXML
     void onVolver(ActionEvent event) {
-
+        app.openViewPrincipal();
     }
 
     public void setApp(App app){

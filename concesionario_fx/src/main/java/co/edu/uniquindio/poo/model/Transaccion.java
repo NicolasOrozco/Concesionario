@@ -11,6 +11,7 @@ public abstract class Transaccion {
 
     public Transaccion() {
         fecha = LocalDate.now();
+        valor = calcularValor();
     }
     public abstract double calcularValor();
 
@@ -37,4 +38,19 @@ public abstract class Transaccion {
     public void setValor(Double valor) {
         this.valor = valor;
     }
+    public LocalDate getFecha() {
+        return fecha;
+    }
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public abstract String obtenerTipoTransaccion();
+    
 }

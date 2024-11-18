@@ -91,6 +91,10 @@
             }
         }
 
+        public void agregarTransaccion(Transaccion transaccion){
+            transacciones.add(transaccion);
+        }
+
         public void agregarVehiculo(Vehiculo vehiculo){
             if (!verificarVehiculo(vehiculo.getId())){
                 vehiculos.add(vehiculo);

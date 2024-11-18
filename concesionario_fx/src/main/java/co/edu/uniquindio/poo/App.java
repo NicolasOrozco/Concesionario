@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.time.LocalDate;
+
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -276,6 +278,7 @@ public class App extends Application {
         Suv suv0 = new Suv("suv0", "Chevrolet", "Nuevo", "Tahoe",2024,Transmision.AUTOMATICO, 10, 5200, 180,  5, TipoCombustible.DIESEL, 4, true, true, true, true, true, true, true, true, 2, true, 350000000);
         suv0.setAtributosCombustible(new AtributosCombustible());
         concesionario.agregarVehiculo(suv0);
+
     }
     public static void main(String[] args) {
         launch();

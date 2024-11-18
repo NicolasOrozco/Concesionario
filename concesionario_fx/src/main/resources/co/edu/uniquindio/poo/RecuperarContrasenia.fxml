@@ -45,7 +45,7 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="43.0" />
          </font>
       </Label>
-      <Label fx:id="lblPreguntaSeguridad" layoutX="565.0" layoutY="219.0" text="%key.unspecified" textFill="WHITE">
+      <Label fx:id="lblPreguntaSeguridad" layoutX="565.0" layoutY="219.0" text="Ingrese la respuesta de su pregunta de seguridad" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="26.0" />
          </font>

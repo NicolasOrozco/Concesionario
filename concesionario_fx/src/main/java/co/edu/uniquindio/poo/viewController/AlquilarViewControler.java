@@ -9,20 +9,23 @@ import javafx.scene.control.TableColumn;
 import java.net.URL;
 import co.edu.uniquindio.poo.App;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 
-import co.edu.uniquindio.poo.App;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.controller.AlquilarController;
 import co.edu.uniquindio.poo.model.Vehiculo;
 import co.edu.uniquindio.poo.model.Concesionario;
+import co.edu.uniquindio.poo.model.Empleado;
+import co.edu.uniquindio.poo.model.Transaccion;
+
 import java.util.Collection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 
 public class AlquilarViewControler {
     AlquilarController alquilarController;
@@ -32,6 +35,15 @@ public class AlquilarViewControler {
     @FXML
     private Button btnAlquilar;
 
+    ObservableList<Empleado> listEmpleados = FXCollections.observableArrayList();
+    Empleado selectedEmpleado;
+
+
+    @FXML
+    void onCerrarSesion(ActionEvent event) {
+        app.openViewPrincipal();
+    }
+
     @FXML
     private TableColumn<Vehiculo, String> tbcTipoVehiculo;
 
@@ -39,10 +51,10 @@ public class AlquilarViewControler {
     private TableColumn<Vehiculo, String> tbcMarca;
 
     @FXML
-    private Label lblCedulaEmpleado1;
+    private Label lblDias;
 
     @FXML
-    private Button btnCerrarSesion;
+    private Button btnVolver;
 
     @FXML
     private Label lblTitulo;
@@ -54,10 +66,10 @@ public class AlquilarViewControler {
     private Label lblCedulaCliente;
 
     @FXML
-    private TableColumn<Vehiculo, Integer> tbcPrecio;
+    private TableColumn<Transaccion, Double> tbcPrecio;
 
     @FXML
-    private TextField btnCedulaEmpleado1;
+    private TextField txfDias;
 
     @FXML
     private Label lblCedulaEmpleado;
@@ -69,26 +81,28 @@ public class AlquilarViewControler {
     private TableColumn<Vehiculo, String> tbcModelo;
 
     @FXML
-    private TextField btnCedulaCliente;
+    private TextField txfCedulaEmpleado;
 
-    @FXML
-    private TextField btnCedulaEmpleado;
+   @FXML
+   private TextField txfCedulaCliente; 
 
-    @FXML
-    void onCerrarSesion(ActionEvent event) {
-        app.openViewPrincipal();
-    }
+   
 
     @FXML
     void onAlquilar(ActionEvent event) {
-        
+        alquilarController.alquilar(selectedVehiculo, txfCedulaCliente.getText(), txfCedulaEmpleado.getText(),Integer.parseInt(txfDias.getText()));
     }
-    
+    @FXML 
+    void onVolver(ActionEvent event){
+        app.openRealizarTransacciones();
+    }
     @FXML
     void initialize() {
         alquilarController = new AlquilarController(app.concesionario);
         initView();
     }
+
+    
 
     private void initView() {
     initDataBinding();
@@ -108,12 +122,9 @@ public class AlquilarViewControler {
         tbcMarca.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMarca()));
         tbcModelo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModelo()));
         tbcTipoCombustible.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTipoCombustible().toString()));
-        tbcPrecio.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
+        tbcPrecio.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValor()/250));
 
     }
-
-    // tbcCedula.setCellValueFactory(cellData -> new
-    // SimpleStringProperty(cellData.getValue().getCedula()));
 
 
     private void cargarVehiculos() {

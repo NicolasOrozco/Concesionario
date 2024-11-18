@@ -7,7 +7,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CrearClienteViewController">
    <children>
       <AnchorPane layoutY="42.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
@@ -21,27 +20,27 @@
             <Line endX="100.0" layoutX="102.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="896.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="100.0" layoutX="741.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-            <Label fx:id="lblNombre" layoutX="232.0" layoutY="114.0" prefHeight="45.0" prefWidth="116.0" text="Nombre" textFill="WHITE">
+            <Label fx:id="lblNombre" layoutX="20.0" layoutY="98.0" prefHeight="45.0" prefWidth="116.0" text="Nombre" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="lblCedula" layoutX="232.0" layoutY="169.0" prefHeight="17.0" prefWidth="84.0" text="C.C." textFill="WHITE">
+            <Label fx:id="lblCedula" layoutX="20.0" layoutY="153.0" prefHeight="17.0" prefWidth="84.0" text="C.C." textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="lblContrasenia" layoutX="232.0" layoutY="223.0" prefHeight="45.0" prefWidth="146.0" text="Contraseña" textFill="WHITE">
+            <Label fx:id="lblContrasenia" layoutX="20.0" layoutY="207.0" prefHeight="45.0" prefWidth="146.0" text="Contraseña" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="lblPregunta" layoutX="227.0" layoutY="280.0" prefHeight="45.0" prefWidth="289.0" text="Pregunta de Seguridad" textFill="WHITE">
+            <Label fx:id="lblPregunta" layoutX="15.0" layoutY="264.0" prefHeight="45.0" prefWidth="289.0" text="Pregunta de Seguridad" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="lblRespuesta" layoutX="227.0" layoutY="337.0" prefHeight="45.0" prefWidth="130.0" text="Respuesta" textFill="WHITE">
+            <Label fx:id="lblRespuesta" layoutX="15.0" layoutY="321.0" prefHeight="45.0" prefWidth="130.0" text="Respuesta" textFill="WHITE">
                <font>
                   <Font name="Tw Cen MT Condensed" size="40.0" />
                </font>
@@ -56,7 +55,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="txfNombre" layoutX="541.0" layoutY="117.0" prefHeight="39.0" prefWidth="239.0">
+            <TextField fx:id="txfNombre" layoutX="303.0" layoutY="101.0" prefHeight="39.0" prefWidth="239.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -64,7 +63,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="txfCdeula" layoutX="541.0" layoutY="172.0" prefHeight="39.0" prefWidth="239.0">
+            <TextField fx:id="txfCdeula" layoutX="303.0" layoutY="156.0" prefHeight="39.0" prefWidth="239.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -72,7 +71,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="txfContrasenia" layoutX="541.0" layoutY="226.0" prefHeight="39.0" prefWidth="239.0">
+            <TextField fx:id="txfContrasenia" layoutX="303.0" layoutY="210.0" prefHeight="39.0" prefWidth="239.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -80,7 +79,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="txfPregunta" layoutX="541.0" layoutY="283.0" prefHeight="39.0" prefWidth="239.0">
+            <TextField fx:id="txfPregunta" layoutX="303.0" layoutY="267.0" prefHeight="39.0" prefWidth="239.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -88,7 +87,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="txfRespuesta" layoutX="541.0" layoutY="340.0" prefHeight="39.0" prefWidth="239.0">
+            <TextField fx:id="txfRespuesta" layoutX="303.0" layoutY="324.0" prefHeight="39.0" prefWidth="239.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -96,6 +95,17 @@
                   <Font size="18.0" />
                </font>
             </TextField>
+            <TableView fx:id="tblClientes" layoutX="578.0" layoutY="95.0" prefHeight="273.0" prefWidth="397.0">
+              <columns>
+                <TableColumn fx:id="tbcNombreCliente" prefWidth="194.0" text="Nombre" />
+                <TableColumn fx:id="tbcCedulaCliente" prefWidth="202.0" text="Cedula" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblTitulo1" layoutX="670.0" layoutY="46.0" text="Clientes Actuales" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="42.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

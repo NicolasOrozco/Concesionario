@@ -5,7 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import co.edu.uniquindio.poo.App;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import co.edu.uniquindio.poo.controller.CrearClienteController;
 import co.edu.uniquindio.poo.model.Cliente;
 
@@ -17,7 +18,14 @@ public class CrearClienteViewController {
     @FXML
     private URL location;
 
-    
+    @FXML
+    private TableColumn<?, ?> tbcNombreCliente;
+
+    @FXML
+    private TableColumn<?, ?> tbcCedulaCliente;
+
+    @FXML
+    private TableView<?> tblClientes;
     
     @FXML
     private Label lblNombre;

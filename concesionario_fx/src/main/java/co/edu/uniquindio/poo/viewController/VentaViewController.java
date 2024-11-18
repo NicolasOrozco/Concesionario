@@ -77,8 +77,6 @@ public class VentaViewController {
     @FXML
     void onVender(ActionEvent event) {
         
-
-        
     }
 
     @FXML
@@ -120,7 +118,7 @@ public class VentaViewController {
 
     @FXML
     void onCerrarSesion(ActionEvent event) {
-        app.openViewPrincipal();
+        app.openHomeEmpleado();
     }
 
     @FXML

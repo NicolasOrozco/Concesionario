@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.viewController;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -33,6 +34,22 @@ public class ComprarVehiculoViewController {
 
     @FXML
     private TextField idField;
+
+    @FXML
+    private Button btnVolver;
+
+    @FXML
+    private Button btnRegistrar;
+
+    @FXML
+    void onVolver(ActionEvent event) {
+        app.openHomeEmpleado();
+    }
+
+    @FXML
+    void registrarVehiculo(ActionEvent event) {
+
+    }
 
     @FXML
     public void initialize() {

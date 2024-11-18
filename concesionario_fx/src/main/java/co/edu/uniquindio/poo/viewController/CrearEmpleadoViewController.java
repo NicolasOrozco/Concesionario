@@ -65,6 +65,7 @@ public class CrearEmpleadoViewController {
     @FXML
     void onCrearEmpleado(ActionEvent event) {
         agregarEmpleado();
+        app.openAdministrarEmpleados();
     }
 
     @FXML

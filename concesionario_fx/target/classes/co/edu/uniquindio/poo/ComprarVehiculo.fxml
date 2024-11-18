@@ -6,9 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_LEFT" minHeight="600.0" minWidth="1000.0" spacing="10" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController" >
+<VBox alignment="TOP_LEFT" minHeight="600.0" minWidth="1000.0" prefHeight="657.0" prefWidth="1002.0" spacing="10" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController">
     <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="55.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+      <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#onVolver" text="Volver" />
+
+                                <!-- Botón para registrar el vehículo -->
+        <Button fx:id="btnRegistrar" alignment="CENTER" onAction="#registrarVehiculo" text="Registrar Vehículo" />
         <!-- Sección de selección del tipo de vehículo y combustible -->
         <HBox spacing="10">
            <children>
@@ -32,7 +36,7 @@
         </HBox>
         
         <!-- Sección de entrada para los campos comunes de Vehículo -->
-        <VBox spacing="10">
+        <VBox prefHeight="562.0" prefWidth="1002.0" spacing="10">
            <children>
                <HBox spacing="10">
                   <children>
@@ -124,7 +128,7 @@
                       <TextField fx:id="numPasajerosField" promptText="Ingrese el número de pasajeros" />
                   </children>
                </HBox>
-               <HBox spacing="10">
+               <HBox prefHeight="87.0" prefWidth="1002.0" spacing="10">
                   <children>
                       <Label text="Precio:" textFill="WHITE">
                      <font>
@@ -141,9 +145,6 @@
         <VBox fx:id="camposEspecificos" spacing="10">
             <!-- Campos adicionales según tipo de vehículo y combustible -->
         </VBox>
-
-        <!-- Botón para registrar el vehículo -->
-        <Button alignment="CENTER" onAction="#registrarVehiculo" text="Registrar Vehículo" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="55.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
     </children>
 </VBox>

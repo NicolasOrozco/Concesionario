@@ -61,12 +61,12 @@ public class CrearClienteViewController {
     @FXML
     void onCrearCliente(ActionEvent event) {
         crearClienteController.crearCliente(new Cliente(txfNombre.getText(), txfCdeula.getText(), txfContrasenia.getText(), txfPregunta.getText(), txfRespuesta.getText()));
-        app.openAdministrarEmpleados();
+        app.openHomeEmpleado();;
     }
 
     @FXML
     void onVolver(ActionEvent event) {
-        app.openAdministrarEmpleados();
+        app.openHomeEmpleado();
     }
 
     @FXML

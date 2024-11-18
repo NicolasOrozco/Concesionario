@@ -28,7 +28,7 @@
                   <TableColumn fx:id="tbcId" prefWidth="75.0" text="Id" />
                </columns>
             </TableView>
-            <Button fx:id="btnVolver" layoutX="896.0" layoutY="462.0" mnemonicParsing="false" text="Volver" />
+            <Button fx:id="btnVolver" layoutX="896.0" layoutY="462.0" mnemonicParsing="false" onAction="#onVolver" text="Volver" />
          </children>
       </AnchorPane>
    </children>

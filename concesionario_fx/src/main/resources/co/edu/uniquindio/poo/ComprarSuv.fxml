@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ComprarSuvViewController">
+   <children>
+      <AnchorPane layoutY="42.0" prefHeight="517.0" prefWidth="1100.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label fx:id="lblTitulo" layoutX="376.0" layoutY="-2.0" text="COMPRAR VEHICULOS" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Bold" size="42.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="268.0" layoutY="19.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="102.0" layoutY="19.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="984.0" layoutY="18.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="812.0" layoutY="18.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Label fx:id="lblPlaca" layoutX="14.0" layoutY="45.0" prefHeight="45.0" prefWidth="48.0" text="Placa:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVolver" layoutX="63.0" layoutY="438.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="46.0" prefWidth="155.0" text="Volver">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCrearVehiculo" layoutX="884.0" layoutY="438.0" mnemonicParsing="false" onAction="#onCrearVehiculo" prefHeight="46.0" prefWidth="155.0" text="Agregar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txfPlaca" layoutX="116.0" layoutY="55.0" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="txfMarca" layoutX="116.0" layoutY="100.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblMarca" layoutX="12.0" layoutY="90.0" prefHeight="45.0" prefWidth="74.0" text="Marca:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfCondicion" layoutX="116.0" layoutY="145.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblCondicion" layoutX="12.0" layoutY="135.0" prefHeight="45.0" prefWidth="81.0" text="Condición:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfModelo" layoutX="116.0" layoutY="190.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblModelo" layoutX="12.0" layoutY="180.0" prefHeight="45.0" prefWidth="74.0" text="Modelo:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfAnio" layoutX="116.0" layoutY="235.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblAnio" layoutX="12.0" layoutY="225.0" prefHeight="45.0" prefWidth="48.0" text="Año:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTransmision" layoutX="12.0" layoutY="270.0" prefHeight="45.0" prefWidth="102.0" text="Transmisión:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfTransmision" layoutX="116.0" layoutY="280.0" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="txfCambios" layoutX="116.0" layoutY="325.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblCambios" layoutX="12.0" layoutY="315.0" prefHeight="45.0" prefWidth="90.0" text="Cambios:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfCilindraje" layoutX="116.0" layoutY="370.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblCilindraje" layoutX="12.0" layoutY="360.0" prefHeight="45.0" prefWidth="102.0" text="Cilindraje:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfVelMaxima" layoutX="384.0" layoutY="55.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblVelMaxima" layoutX="284.0" layoutY="45.0" prefHeight="45.0" prefWidth="81.0" text="Vel. Máx.:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCombustible" layoutX="284.0" layoutY="90.0" prefHeight="45.0" prefWidth="114.0" text="Combustible:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfCombustible" layoutX="384.0" layoutY="100.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblPasajeros" layoutX="284.0" layoutY="135.0" prefHeight="45.0" prefWidth="90.0" text="Pasajeros:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfPasajeros" layoutX="384.0" layoutY="145.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblPuertas" layoutX="284.0" layoutY="180.0" prefHeight="45.0" prefWidth="90.0" text="Puertas:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfPuertas" layoutX="384.0" layoutY="190.0" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="txfPrecio" layoutX="382.0" layoutY="235.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblPrecio" layoutX="282.0" layoutY="225.0" prefHeight="45.0" prefWidth="90.0" text="Precio:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMaletero" layoutX="282.0" layoutY="270.0" prefHeight="45.0" prefWidth="90.0" text="Maletero:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfMaletero" layoutX="382.0" layoutY="280.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblAc" layoutX="280.0" layoutY="315.0" prefHeight="45.0" prefWidth="90.0" text="A/C?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCamaraTrasera" layoutX="280.0" layoutY="360.0" prefHeight="45.0" prefWidth="90.0" text="Cámara?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblControlCrucero" layoutX="536.0" layoutY="45.0" prefHeight="45.0" prefWidth="90.0" text="Crucero?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAirbag" layoutX="536.0" layoutY="90.0" prefHeight="45.0" prefWidth="90.0" text="Airbag?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblABS" layoutX="536.0" layoutY="135.0" prefHeight="45.0" prefWidth="90.0" text="ABS?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSensorColision" layoutX="531.0" layoutY="311.0" prefHeight="45.0" prefWidth="90.0" text="Colisión?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTraficoCruzado" layoutX="531.0" layoutY="356.0" prefHeight="45.0" prefWidth="90.0" text="T.C.?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkSiControlCrucero" layoutX="674.0" layoutY="58.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiAireAcondicionado" layoutX="413.0" layoutY="326.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiCamaraTrasera" layoutX="413.0" layoutY="371.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiAirbag" layoutX="674.0" layoutY="101.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiABS" layoutX="674.0" layoutY="146.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiSensorColision" layoutX="647.0" layoutY="322.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiTraficoCruzado" layoutX="647.0" layoutY="367.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lblSensores" layoutX="531.0" layoutY="274.0" prefHeight="45.0" prefWidth="90.0" text="Sensores:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="626.0" layoutY="278.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <CheckBox fx:id="checkSi4x4" layoutX="672.0" layoutY="234.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSiAsistenciaCarril" layoutX="672.0" layoutY="189.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lbl4x4" layoutX="534.0" layoutY="223.0" prefHeight="45.0" prefWidth="90.0" text="4x4?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAsistenciaCarril" layoutX="534.0" layoutY="178.0" prefHeight="45.0" prefWidth="114.0" text="Asistencia Carril?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="759.0" layoutY="158.0" rotate="-90.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="759.0" layoutY="297.0" rotate="-90.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Label fx:id="lblAttsElectrico" layoutX="785.0" layoutY="89.0" prefHeight="45.0" prefWidth="281.0" text="Llenar Sólo si el Vehículo es Eléctrico" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCapacidadBateria" layoutX="785.0" layoutY="178.0" prefHeight="45.0" prefWidth="169.0" text="Capacidad Bateria:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfCapacidadBateria" layoutX="934.0" layoutY="188.0" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="txfTiempoCarga" layoutX="934.0" layoutY="143.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblTiempoCarga" layoutX="787.0" layoutY="133.0" prefHeight="45.0" prefWidth="122.0" text="Tiempo Carga:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAttsHibrido" layoutX="785.0" layoutY="268.0" prefHeight="45.0" prefWidth="281.0" text="Llenar Sólo si el Vehículo es Híbrido" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkSiEnchufable" layoutX="943.0" layoutY="328.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lblEnchufable" layoutX="810.0" layoutY="317.0" prefHeight="45.0" prefWidth="90.0" text="Enchufable?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHibridoLigero" layoutX="810.0" layoutY="358.0" prefHeight="45.0" prefWidth="90.0" text="Ligero?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkSiHibridoLigero" layoutX="943.0" layoutY="369.0" mnemonicParsing="false" text="Sí" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lblCedulaEmpleado" layoutX="550.0" layoutY="450.0" prefHeight="45.0" prefWidth="114.0" text="C.C. Empleado:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfCedulaEmpleado" layoutX="668.0" layoutY="460.0" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="txfCedulaCliente" layoutX="361.0" layoutY="460.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label fx:id="lblCedulaCliente" layoutX="257.0" layoutY="450.0" prefHeight="45.0" prefWidth="102.0" text="C.C. Cliente:" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

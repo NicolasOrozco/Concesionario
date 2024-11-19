@@ -45,7 +45,7 @@ public abstract class Vehiculo implements Autonomia {
         this.id = id;
         this.tipoCombustible = tipoCombustible;
         this.atributosCombustible = crearAtributosCombustible(tipoCombustible);
-        this.disponibilidad = disponibilidad;
+        disponibilidad = disponibilidad.DISPONIBLE;
     }
 
     /**

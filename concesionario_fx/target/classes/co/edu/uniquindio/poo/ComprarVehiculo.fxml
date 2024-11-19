@@ -1,47 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #181818;" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController">
-    <children>
-        <ScrollPane layoutX="0.0" layoutY="0.0" prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #181818;">
-            <content>
-                <VBox spacing="20.0" alignment="TOP_CENTER" style="-fx-background-color: #181818;" prefWidth="1000.0">
-                    <!-- Título -->
-                    <Label text="Comprar Vehículo" textFill="white" alignment="CENTER" VBox.margin="20.0">
-                        <font>
-                            <Font name="Arial Bold" size="24.0" />
-                        </font>
-                    </Label>
-
-                    <!-- ComboBox para seleccionar el tipo de vehículo -->
-                    <HBox alignment="CENTER" spacing="10.0">
-                        <Label text="Seleccione el tipo de vehículo:" textFill="white">
-                            <font>
-                                <Font name="Arial" size="16.0" />
-                            </font>
-                        </Label>
-                        <ComboBox fx:id="comboTipoVehiculo" promptText="Seleccione un tipo" />
-                    </HBox>
-
-                    <!-- Panel dinámico para los atributos -->
-                    <VBox fx:id="panelAtributos" spacing="10.0" alignment="TOP_CENTER">
-                        <!-- Aquí se cargarán dinámicamente los campos según el tipo de vehículo -->
-                    </VBox>
-
-                    <!-- Botón de confirmación -->
-                    <Button text="Confirmar" fx:id="btnConfirmar" prefWidth="150.0" style="-fx-background-color: #007acc; -fx-text-fill: white; -fx-font-size: 14px;">
-                        <VBox.margin>
-                            <Insets top="20.0" />
-                        </VBox.margin>
-                    </Button>
-                </VBox>
-            </content>
-        </ScrollPane>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CrearClienteViewController">
+   <children>
+      <AnchorPane layoutY="42.0" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label fx:id="lblTitulo" layoutX="330.0" layoutY="-1.0" text="COMPRAR VEHICULOS" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed Bold" size="42.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="223.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="102.0" layoutY="23.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="896.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="100.0" layoutX="759.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Label fx:id="lblPregunta" layoutX="264.0" layoutY="86.0" prefHeight="45.0" prefWidth="473.0" text="¿Qué tipo de vehiculo desea registrar?" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVolver" layoutX="325.0" layoutY="438.0" mnemonicParsing="false" onAction="#onVolver" prefHeight="46.0" prefWidth="155.0" text="Volver">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBus" layoutX="109.0" layoutY="201.0" mnemonicParsing="false" onAction="#onBus" prefHeight="46.0" prefWidth="155.0" text="Bus">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnContinuar" layoutX="515.0" layoutY="438.0" mnemonicParsing="false" onAction="#onContinuar" prefHeight="46.0" prefWidth="155.0" text="Continuar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCamion" layoutX="309.0" layoutY="201.0" mnemonicParsing="false" onAction="#onCamion" prefHeight="46.0" prefWidth="155.0" text="Camión">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeportivo" layoutX="520.0" layoutY="201.0" mnemonicParsing="false" onAction="#onDeportivo" prefHeight="46.0" prefWidth="155.0" text="Auto Deportivo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMoto" layoutX="737.0" layoutY="201.0" mnemonicParsing="false" onAction="#onMoto" prefHeight="46.0" prefWidth="155.0" text="Moto">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPickUp" layoutX="109.0" layoutY="270.0" mnemonicParsing="false" onAction="#onPickUp" prefHeight="46.0" prefWidth="155.0" text="PickUp">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSedan" layoutX="309.0" layoutY="270.0" mnemonicParsing="false" onAction="#onSedan" prefHeight="46.0" prefWidth="155.0" text="Sedán">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSuv" layoutX="520.0" layoutY="270.0" mnemonicParsing="false" onAction="#onSuv" prefHeight="46.0" prefWidth="155.0" text="Suv">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVan" layoutX="737.0" layoutY="270.0" mnemonicParsing="false" onAction="#onVan" prefHeight="46.0" prefWidth="155.0" text="Van">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

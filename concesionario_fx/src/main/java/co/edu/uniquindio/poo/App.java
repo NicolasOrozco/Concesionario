@@ -110,6 +110,76 @@ public class App extends Application {
         }
     }
 
+
+    public void openComprarSuv(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarSuv.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarSuvViewController comprarSuvViewController = loader.getController();
+            comprarSuvViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public void openComprarVan(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarVan.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarVanViewController comprarVanViewController = loader.getController();
+            comprarVanViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public void openComprarBus(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarBus.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarBusViewController comprarBusViewController = loader.getController();
+            comprarBusViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public void openComprarCamion(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarCamion.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarCamionViewController viewController = loader.getController();
+            viewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+
     public void openViewAdministrador(){
         try {
             FXMLLoader loader = new FXMLLoader();

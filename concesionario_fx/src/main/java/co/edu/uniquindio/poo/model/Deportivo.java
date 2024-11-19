@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.model;
 
-public class Deportivo extends Carro implements ObtenerTipoVehiculo{
+public class Deportivo extends Carro {
     private double numeroCaballosDeFuerza, tiempo0a100kmph;
 
     public Deportivo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int numPuertas, boolean tieneAireAcondicionado, boolean tieneCamaraDeReversa, boolean tieneControlCrucero, boolean tieneBolsaDeAire, boolean tieneABS, boolean tieneSensoresColision, boolean tieneSensoresTraficoCruzado, boolean tieneAsistenciaPermanenciaDeCarril, double numeroCaballosDeFuerza, double tiempo0a100kmph, int precio, Disponibilidad disponibilidad) {

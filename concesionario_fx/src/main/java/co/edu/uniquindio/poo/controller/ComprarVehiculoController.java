@@ -15,18 +15,4 @@ public class ComprarVehiculoController {
         this.concesionario = concesionario;
     }
 
-    public List<Vehiculo> obtenerVehiculosDisponibles() {
-        return concesionario.getVehiculos().stream()
-                .filter(vehiculo -> vehiculo.getDisponibilidad() == Disponibilidad.DISPONIBLE)
-                .collect(Collectors.toList());
-    }
-
-    public boolean comprarVehiculo(String idVehiculo) {
-        Vehiculo vehiculo = concesionario.buscarVehiculo(idVehiculo);
-        if (vehiculo != null && vehiculo.getDisponibilidad() == Disponibilidad.DISPONIBLE) {
-            concesionario.eliminarVehiculo(idVehiculo);
-            return true;
-        }
-        return false;
-    }
 }

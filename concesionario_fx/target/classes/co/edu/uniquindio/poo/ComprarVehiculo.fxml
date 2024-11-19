@@ -7,19 +7,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1"  prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #181818;" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #181818;" fx:controller="co.edu.uniquindio.poo.viewController.ComprarVehiculoViewController">
     <children>
         <ScrollPane layoutX="0.0" layoutY="0.0" prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #181818;">
             <content>
                 <VBox spacing="20.0" alignment="TOP_CENTER" style="-fx-background-color: #181818;" prefWidth="1000.0">
                     <!-- Título -->
-                    <Label text="Comprar Vehículo" textFill="white" alignment="CENTER">
+                    <Label text="Comprar Vehículo" textFill="white" alignment="CENTER" VBox.margin="20.0">
                         <font>
                             <Font name="Arial Bold" size="24.0" />
                         </font>
-                        <VBox.margin>
-                            <Insets top="20.0" />
-                        </VBox.margin>
                     </Label>
 
                     <!-- ComboBox para seleccionar el tipo de vehículo -->
@@ -40,7 +37,7 @@
                     <!-- Botón de confirmación -->
                     <Button text="Confirmar" fx:id="btnConfirmar" prefWidth="150.0" style="-fx-background-color: #007acc; -fx-text-fill: white; -fx-font-size: 14px;">
                         <VBox.margin>
-                            <Insets top="20.0" bottom="20.0" />
+                            <Insets top="20.0" />
                         </VBox.margin>
                     </Button>
                 </VBox>

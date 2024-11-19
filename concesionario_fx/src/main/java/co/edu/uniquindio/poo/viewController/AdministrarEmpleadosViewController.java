@@ -1,5 +1,4 @@
 package co.edu.uniquindio.poo.viewController;
-
 import co.edu.uniquindio.poo.model.Empleado;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

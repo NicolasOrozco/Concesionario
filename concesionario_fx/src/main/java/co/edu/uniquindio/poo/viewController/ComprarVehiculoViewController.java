@@ -1,215 +1,56 @@
 package co.edu.uniquindio.poo.viewController;
 
-import javafx.event.ActionEvent;
+import co.edu.uniquindio.poo.model.Concesionario;
+import co.edu.uniquindio.poo.model.Vehiculo;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import co.edu.uniquindio.poo.model.*;
-import co.edu.uniquindio.poo.controller.ComprarVehiculoController;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import co.edu.uniquindio.poo.App;
-
+import co.edu.uniquindio.poo.controller.*;
 
 public class ComprarVehiculoViewController {
-
-    ComprarVehiculoController comprarVehiculoController;
-
-    private App app;
+    App app;
+    @FXML
+    private ListView<String> listaVehiculos;
 
     @FXML
-    private ComboBox<String> tipoVehiculoCombo;
+    private Button btnComprar;
 
     @FXML
-    private ComboBox<TipoCombustible> tipoCombustibleCombo;
+    private TextField txtIdVehiculo;
 
     @FXML
-    private VBox camposEspecificos;
+    private Label lblResultado;
 
-    @FXML
-    private TextField marcaField, modeloField, añoField, cambiosField, cilindrajeField, velMaximaField, numPasajerosField, precioField;
+    private ComprarVehiculoController comprarVehiculoController;
 
-    @FXML
-    private ComboBox<Transmision> transmisionCombo;
-
-    @FXML
-    private TextField idField;
-
-    @FXML
-    private Button btnVolver;
-
-    @FXML
-    private Button btnRegistrar;
-
-    @FXML
-    void onVolver(ActionEvent event) {
-        app.openHomeEmpleado();
-    }
-
-    @FXML
-    void registrarVehiculo(ActionEvent event) {
-
-    }
-
-    @FXML
     public void initialize() {
-
-        comprarVehiculoController = new ComprarVehiculoController(app.concesionario); 
-        // Inicializar ComboBox de tipo de vehículo
-        tipoVehiculoCombo.getItems().addAll("Moto", "Bus", "Camion", "Deportivo", "PickUp", "Sedan", "Suv", "Van");
-        tipoCombustibleCombo.getItems().addAll(TipoCombustible.values());
-        transmisionCombo.getItems().addAll(Transmision.values());
-
-        // Añadir listeners
-        tipoVehiculoCombo.setOnAction(e -> actualizarCamposEspecificos());
-        tipoCombustibleCombo.setOnAction(e -> actualizarCamposEspecificos());
+        comprarVehiculoController = new ComprarVehiculoController(app.concesionario);
+        cargarVehiculos();
     }
 
-    private void actualizarCamposEspecificos() {
-        camposEspecificos.getChildren().clear();
-
-        String tipoVehiculo = tipoVehiculoCombo.getValue();
-        TipoCombustible tipoCombustible = tipoCombustibleCombo.getValue();
-
-        if (tipoVehiculo == null || tipoCombustible == null) return;
-
-        // Campos específicos según tipo de vehículo
-        switch (tipoVehiculo) {
-            case "Moto":
-                // Moto no tiene atributos adicionales
-                break;
-            case "Bus":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Número de Ejes:", "numEjes"),
-                    crearCampoTexto("Número de Salidas de Emergencia:", "numSalidasEmergencia")
-                );
-                break;
-            case "Camion":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Número de Ejes:", "numEjes"),
-                    crearCampoCheckbox("Freno de Aire:", "tieneFrenoDeAire"),
-                    crearCampoTexto("Tipo de Camión:", "tipoCamion")
-                );
-                break;
-            case "Deportivo":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Caballos de Fuerza:", "numeroCaballosDeFuerza"),
-                    crearCampoTexto("0 a 100 km/h (s):", "tiempo0a100kmph")
-                );
-                break;
-            case "PickUp":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Capacidad de Caja (m³):", "capacidadCaja"),
-                    crearCampoCheckbox("Es 4x4:", "es4x4")
-                );
-                break;
-            case "Sedan":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Capacidad del Maletero (m³):", "capacidadMaletero")
-                );
-                break;
-            case "Suv":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Capacidad del Maletero (m³):", "capacidadMaletero"),
-                    crearCampoCheckbox("Es 4x4:", "es4x4")
-                );
-                break;
-            case "Van":
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Tipo de Van:", "tipoVan")
-                );
-                break;
+    private void cargarVehiculos() {
+        listaVehiculos.getItems().clear();
+        for (Vehiculo vehiculo : comprarVehiculoController.obtenerVehiculosDisponibles()) {
+            listaVehiculos.getItems().add(vehiculo.toStringChiquito());
         }
-
-        // Campos específicos según tipo de combustible
-        switch (tipoCombustible) {
-            case ELECTRICO:
-                camposEspecificos.getChildren().addAll(
-                    crearCampoTexto("Tiempo de Carga (horas):", "tiempoDeCarga"),
-                    crearCampoTexto("Capacidad de la Batería (kWh):", "capacidadBateria")
-                );
-                break;
-            case HIBRIDO:
-                camposEspecificos.getChildren().addAll(
-                    crearCampoCheckbox("Es Enchufable:", "esEnchufable"),
-                    crearCampoCheckbox("Es Híbrido Ligero:", "esHibridoLigero")
-                );
-                break;
-            // GASOLINA y DIESEL no necesitan campos adicionales
-        }
-    }
-
-    // Método auxiliar para crear campos de texto dinámicos
-    private Node crearCampoTexto(String etiqueta, String id) {
-        HBox hbox = new HBox(10);
-        Label label = new Label(etiqueta);
-        TextField textField = new TextField();
-        textField.setId(id);
-        hbox.getChildren().addAll(label, textField);
-        return hbox;
-    }
-
-    // Método auxiliar para crear campos de selección (Checkbox)
-    private Node crearCampoCheckbox(String etiqueta, String id) {
-        CheckBox checkBox = new CheckBox(etiqueta);
-        checkBox.setId(id);
-        return checkBox;
     }
 
     @FXML
-    private void registrarVehiculo() {
-        // Aquí obtendrás los valores de los campos básicos y específicos
-        String id = idField.getText();
-        String marca = marcaField.getText();
-        String modelo = modeloField.getText();
-        int año = Integer.parseInt(añoField.getText());
-        Transmision transmision = transmisionCombo.getValue();
-        int cambios = Integer.parseInt(cambiosField.getText());
-        int cilindraje = Integer.parseInt(cilindrajeField.getText());
-        int velMaxima = Integer.parseInt(velMaximaField.getText());
-        int numeroPasajeros = Integer.parseInt(numPasajerosField.getText());
-        int precio = Integer.parseInt(precioField.getText());
-        TipoCombustible tipoCombustible = tipoCombustibleCombo.getValue();
-
-        // Según el tipo de vehículo, recoge los datos adicionales y crea el objeto
-        String tipoVehiculo = tipoVehiculoCombo.getValue();
-        switch (tipoVehiculo) {
-            case "Camion":
-                int numEjes = Integer.parseInt(getValorCampo("numEjes"));
-                boolean tieneFrenoDeAire = getValorCheckbox("tieneFrenoDeAire");
-                String tipoCamion = getValorCampo("tipoCamion");
-                Camion camion = new Camion(id, marca, "Nueva", modelo, año, transmision, cambios, cilindraje, velMaxima, numeroPasajeros, tipoCombustible, numEjes, tieneFrenoDeAire, tipoCamion, precio, Disponibilidad.DISPONIBLE);
-                // Agregar el objeto al concesionario
-                break;
-            // Más casos para otros vehículos...
+    public void comprarVehiculo() {
+        String idVehiculo = txtIdVehiculo.getText();
+        boolean exito = comprarVehiculoController.comprarVehiculo(idVehiculo);
+        if (exito) {
+            lblResultado.setText("Vehículo comprado con éxito.");
+            cargarVehiculos();
+        } else {
+            lblResultado.setText("Error: Vehículo no encontrado o no disponible.");
         }
     }
 
-    // Métodos auxiliares para obtener valores dinámicos
-    private String getValorCampo(String id) {
-        for (Node node : camposEspecificos.getChildren()) {
-            if (node instanceof HBox && node.getId() != null && node.getId().equals(id)) {
-                for (Node child : ((HBox) node).getChildren()) {
-                    if (child instanceof TextField) {
-                        return ((TextField) child).getText();
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
-    private boolean getValorCheckbox(String id) {
-        for (Node node : camposEspecificos.getChildren()) {
-            if (node instanceof CheckBox && node.getId() != null && node.getId().equals(id)) {
-                return ((CheckBox) node).isSelected();
-            }
-        }
-        return false;
-    }
-
-    public void setApp(App app) {
+     public void setApp(App app){
         this.app = app;
     }
 }
-

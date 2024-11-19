@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo.controller;
 import co.edu.uniquindio.poo.model.*;
 import java.util.Collection;
-import javafx.scene.control.Dialog;
-import javafx.util.Pair;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 
 
@@ -20,9 +20,13 @@ public class HomeClienteController {
     
 
     public void mostrarDetallesVehiculo(Vehiculo vehiculo){
-        Dialog<Pair<String, String>> dialog = new Dialog<>();
+        Alert dialog = new Alert(AlertType.INFORMATION);
         dialog.setTitle("Tu Carro UQ");
-        dialog.setHeaderText(vehiculo.toString());
+        dialog.setHeaderText("Informacion: ");
+
+        dialog.setContentText(vehiculo.toString());  
+
+        dialog.showAndWait(); 
 
     }
 

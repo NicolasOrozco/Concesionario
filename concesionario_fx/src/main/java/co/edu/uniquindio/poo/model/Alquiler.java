@@ -7,13 +7,26 @@ public class Alquiler extends Transaccion {
     public Alquiler(){
         super();
     }
+
+    /**
+     * Método para calcular el valor del alquiler
+     */
     public double calcularValor() {
         return (vehiculo.getPrecio() / 250)*fechaInicio.until(fechaLimite).getDays();
     }
+
+    /**
+     * Método para obtener el tipo de transaccion
+     */
     @Override
     public String obtenerTipoTransaccion() {
         return "Alquiler";
     }
+
+    ///////////////////////////////////////////Gets Y Sets//////////////////////////
+    /**
+     * Métodos getts y sets de la clase aqluiler
+     */
     public LocalDate getFechaInicio() {
         return fechaInicio;
     }
@@ -28,7 +41,4 @@ public class Alquiler extends Transaccion {
     }
 
     
-
-    
-
 }

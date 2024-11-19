@@ -24,6 +24,10 @@ public class HomeClienteViewController {
     private App app;
     Vehiculo selectedVehiculo;
 
+
+    @FXML
+    private Button btnComprarVehiculos;
+
     @FXML
     private URL location;
 
@@ -96,6 +100,11 @@ public class HomeClienteViewController {
     @FXML
     void onVerDetalles(ActionEvent event) {
         homeClienteController.mostrarDetallesVehiculo(selectedVehiculo);
+    }
+
+    @FXML
+    void onComprarVehiculos(ActionEvent event) {
+        app.openComprarVehiculo();
     }
 
     public void setApp(App app) {

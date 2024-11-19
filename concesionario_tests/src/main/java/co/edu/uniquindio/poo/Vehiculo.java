@@ -6,9 +6,10 @@ public  abstract class Vehiculo implements Autonomia{
     private  int año, cambios, cilindraje, VelMaxima, numeroPasajeros, precio;
     private TipoCombustible tipoCombustible;
     private AtributosCombustible atributosCombustible;
+    private Disponibilidad disponibilidad;
    
 
-    public Vehiculo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio){
+    public Vehiculo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio, Disponibilidad disponibilidad){
         this.marca = marca;
         this.condicion = condicion;
         this.modelo = modelo;
@@ -22,6 +23,7 @@ public  abstract class Vehiculo implements Autonomia{
         this.id = id; 
         this.tipoCombustible = tipoCombustible;
         this.atributosCombustible = crearAtributosCombustible(tipoCombustible);
+        this.disponibilidad = disponibilidad;
                
     }
     private AtributosCombustible crearAtributosCombustible(TipoCombustible tipo) {
@@ -146,6 +148,18 @@ public  abstract class Vehiculo implements Autonomia{
     
     public String toStringChiquito(){
         return "marca: " + marca + ", modelo" + modelo + ", Precio= " + precio ;
+    }
+    public Transmision getTransmision() {
+        return transmision;
+    }
+    public void setTransmision(Transmision transmision) {
+        this.transmision = transmision;
+    }
+    public Disponibilidad getDisponibilidad() {
+        return disponibilidad;
+    }
+    public void setDisponibilidad(Disponibilidad disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
     
     

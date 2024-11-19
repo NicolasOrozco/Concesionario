@@ -6,10 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
-import co.edu.uniquindio.poo.model.*;
 import co.edu.uniquindio.poo.controller.RealizarTransaccionController;
 import java.net.URL;
-
 
 public class RealizarTransaccionViewController {
     RealizarTransaccionController realizarTransaccionController;

@@ -11,11 +11,7 @@ import javafx.scene.control.TableView;
 import co.edu.uniquindio.poo.App;
 import co.edu.uniquindio.poo.controller.AdministrarEmpleadosController;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import java.util.Collection;
-import co.edu.uniquindio.poo.controller.*;
-
-
 
 public class AdministrarEmpleadosViewController {
 

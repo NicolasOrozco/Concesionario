@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo;
+    package co.edu.uniquindio.poo;
 
     import java.util.Collection;
     import java.util.LinkedList;
@@ -10,7 +10,7 @@ package co.edu.uniquindio.poo;
 		private Collection<Administrador> administradores;
         private Collection<Cliente> clientes;
         private Collection<Vehiculo> vehiculos;
-        private Collection<Transaccion> transacciones;
+        public Collection<Transaccion> transacciones;
 
         public Concesionario(String nombre) {
             this.nombre = nombre;
@@ -34,7 +34,7 @@ package co.edu.uniquindio.poo;
 
         public boolean verificarEmpleadoBlacklist(String id){
             boolean estaEmpleado = false;
-            for (Empleado empleado : empleados) {
+            for (Empleado empleado : blacklist) {
                 if (empleado.getId().equals(id)) {
                     estaEmpleado = true;
                 }
@@ -73,7 +73,7 @@ package co.edu.uniquindio.poo;
         }
 
         public void agregarEmpleado(Empleado empleado) {
-            if (!verificarEmpleado(empleado.getId())|| !verificarEmpleadoBlacklist(empleado.getId())) {
+            if (!verificarEmpleado(empleado.getId()) && !verificarEmpleadoBlacklist(empleado.getId())) {
                 empleados.add(empleado);
 
             }
@@ -91,6 +91,10 @@ package co.edu.uniquindio.poo;
             }
         }
 
+        public void agregarTransaccion(Transaccion transaccion){
+            transacciones.add(transaccion);
+        }
+
         public void agregarVehiculo(Vehiculo vehiculo){
             if (!verificarVehiculo(vehiculo.getId())){
                 vehiculos.add(vehiculo);
@@ -101,6 +105,18 @@ package co.edu.uniquindio.poo;
                 if(empleado.getId().equals(id)){
                    blacklist.add(empleado);
                    empleados.remove(empleado);
+                }
+            }
+        }
+
+        public void editarEmpleado(String id, Empleado actualizado){
+            for (Empleado empleado : empleados) {
+                if (empleado.getId().equals(id)) {
+                    empleado.setNombre(actualizado.getNombre());
+                    empleado.setId(actualizado.getId());
+                    empleado.setPreguntaSeguridad(actualizado.getPreguntaSeguridad());
+                    empleado.setRespuesta(actualizado.getRespuesta());
+                    break;
                 }
             }
         }
@@ -179,7 +195,7 @@ package co.edu.uniquindio.poo;
         public boolean iniciarSesionEmpleado(String id, String contraseña) {
             boolean accesoValido = false;
             for (Empleado empleado : empleados) {
-                if (id.equals(empleado.getId()) || contraseña.equals(empleado.getClaveAcceso())) {
+                if (id.equals(empleado.getId()) && contraseña.equals(empleado.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }
@@ -189,7 +205,7 @@ package co.edu.uniquindio.poo;
         public boolean iniciarSesionAdministrador(String id, String contraseña) {
             boolean accesoValido = false;
             for (Administrador administrador : administradores) {
-                if (id.equals(administrador.getId()) || contraseña.equals(administrador.getClaveAcceso())) {
+                if (id.equals(administrador.getId()) && contraseña.equals(administrador.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }
@@ -199,7 +215,7 @@ package co.edu.uniquindio.poo;
         public boolean iniciarSesionCliente(String id, String contraseña) {
             boolean accesoValido = false;
             for (Cliente cliente : clientes) {
-                if (id.equals(cliente.getId()) || contraseña.equals(cliente.getClaveAcceso())) {
+                if (id.equals(cliente.getId()) && contraseña.equals(cliente.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }

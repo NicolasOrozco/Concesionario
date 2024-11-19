@@ -1,4 +1,5 @@
 package co.edu.uniquindio.poo.viewController;
+
 import co.edu.uniquindio.poo.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,9 +14,6 @@ import java.util.Collection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-
-
 import java.net.URL;
 
 public class CrearClienteViewController {

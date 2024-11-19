@@ -8,7 +8,7 @@ public  abstract class Vehiculo implements Autonomia{
     private AtributosCombustible atributosCombustible;
     private Disponibilidad disponibilidad;
    
-
+    
     public Vehiculo(String id, String marca, String condicion, String modelo, int año,Transmision transmision, int cambios, int cilindraje, int velMaxima, int numeroPasajeros, TipoCombustible tipoCombustible, int precio, Disponibilidad disponibilidad){
         this.marca = marca;
         this.condicion = condicion;

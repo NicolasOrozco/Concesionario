@@ -195,7 +195,7 @@
         public boolean iniciarSesionEmpleado(String id, String contraseña) {
             boolean accesoValido = false;
             for (Empleado empleado : empleados) {
-                if (id.equals(empleado.getId()) || contraseña.equals(empleado.getClaveAcceso())) {
+                if (id.equals(empleado.getId()) && contraseña.equals(empleado.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }
@@ -205,7 +205,7 @@
         public boolean iniciarSesionAdministrador(String id, String contraseña) {
             boolean accesoValido = false;
             for (Administrador administrador : administradores) {
-                if (id.equals(administrador.getId()) || contraseña.equals(administrador.getClaveAcceso())) {
+                if (id.equals(administrador.getId()) && contraseña.equals(administrador.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }
@@ -215,7 +215,7 @@
         public boolean iniciarSesionCliente(String id, String contraseña) {
             boolean accesoValido = false;
             for (Cliente cliente : clientes) {
-                if (id.equals(cliente.getId()) || contraseña.equals(cliente.getClaveAcceso())) {
+                if (id.equals(cliente.getId()) && contraseña.equals(cliente.getClaveAcceso())) {
                     accesoValido = true;
                 }
             }

@@ -2,29 +2,18 @@ package co.edu.uniquindio.poo.viewController;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
-
-import java.net.URL;
 import co.edu.uniquindio.poo.App;
 import javafx.event.ActionEvent;
-
-
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.controller.AlquilarController;
 import co.edu.uniquindio.poo.model.Vehiculo;
-import co.edu.uniquindio.poo.model.Concesionario;
-import co.edu.uniquindio.poo.model.Empleado;
-import co.edu.uniquindio.poo.model.Transaccion;
-
 import java.util.Collection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class AlquilarViewControler {

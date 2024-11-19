@@ -7,12 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import co.edu.uniquindio.poo.App;
-import co.edu.uniquindio.poo.controller.CrearClienteController;
-import co.edu.uniquindio.poo.controller.InicioSesionController;
 import co.edu.uniquindio.poo.controller.RecuperarContraseniaController;
-
 import java.net.URL;
-import javafx.fxml.FXML;
 
 public class RecuperarContraseniaViewController {
     RecuperarContraseniaController recuperarContraseniaController;
@@ -45,15 +41,37 @@ public class RecuperarContraseniaViewController {
 
     @FXML
     private TextField txfRespuesta;
+    @FXML
+    private TextField txfId;
+
+    @FXML
+    private Button btnActualizarPregunta;
+
+    @FXML
+    private void onActualizarPregunta(ActionEvent event) {
+        String id = txfId.getText();
+        String pregunta = buscarPreguntaSeguridadPorId(id);
+        if (pregunta != null) {
+            lblPreguntaSeguridad.setText(pregunta);
+        } else {
+            lblPreguntaSeguridad.setText("ID no encontrado");
+        }
+    }
+
+    private String buscarPreguntaSeguridadPorId(String id) {
+        String pregunta = recuperarContraseniaController.buscarPreguntaSeguridadPorId(id);
+        return pregunta;
+    }
 
     @FXML
     void onAceptar(ActionEvent event) {
-        recuperarContraseniaController.recuperarContrasenia(txfNuevaContrasenia.getText(), "", txfRespuesta.getText());
+        recuperarContraseniaController.recuperarContrasenia(txfNuevaContrasenia.getText(), txfId.getText(), txfRespuesta.getText());
     }
     @FXML
     void initialize() {
         recuperarContraseniaController = new RecuperarContraseniaController(app.concesionario);
     }
+
 
     @FXML
     void onVolver(ActionEvent event) {

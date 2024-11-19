@@ -21,6 +21,7 @@ public class VentaController {
         venta.setCliente(concesionario.buscarCliente(idCliente));
         venta.setEmpleado(concesionario.buscarEmpleado(idEmpleado));
         concesionario.transacciones.add(venta);
+        concesionario.eliminarVehiculo(vehiculo.getId());
         
     }
 

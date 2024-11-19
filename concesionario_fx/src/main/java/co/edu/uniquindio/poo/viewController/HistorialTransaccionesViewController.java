@@ -1,6 +1,5 @@
 package co.edu.uniquindio.poo.viewController;
 
-import co.edu.uniquindio.poo.model.Empleado;
 import co.edu.uniquindio.poo.model.Transaccion;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -11,13 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import co.edu.uniquindio.poo.App;
-import co.edu.uniquindio.poo.controller.AdministrarEmpleadosController;
 import co.edu.uniquindio.poo.controller.HistorialTransaccionesController;
-import java.net.URL;
 import java.util.Collection;
-
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class HistorialTransaccionesViewController {

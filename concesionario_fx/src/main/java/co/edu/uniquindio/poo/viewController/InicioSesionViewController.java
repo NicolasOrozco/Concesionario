@@ -58,7 +58,7 @@ public class InicioSesionViewController {
         String usuario = txfUsuario.getText();
         String contraseña = txfContraseña.getText();
         String sesion =inicioSesionController.inicioSesion(usuario, contraseña);
-        switch ( sesion) {
+        switch (sesion) {
             case "cliente":
                 app.openHomeCliente();
                 break;

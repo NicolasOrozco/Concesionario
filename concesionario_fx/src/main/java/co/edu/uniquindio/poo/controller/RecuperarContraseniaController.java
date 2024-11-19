@@ -25,7 +25,7 @@ public class RecuperarContraseniaController {
                     break;
                 }
                 else{
-
+                    
                 }
             }
         
@@ -43,6 +43,24 @@ public class RecuperarContraseniaController {
         
         }
     }
+    public String buscarPreguntaSeguridadPorId(String id){
+        String pregunta = "Pregunta no encontrada";
+        for (Empleado empleado : concesionario.getEmpleados()) {
+            if (empleado.getId().equals(id)) {
+                pregunta = empleado.getPreguntaSeguridad();
+            }
+        }
+        for (Cliente cliente : concesionario.getClientes()) {
+            if (cliente.getId().equals(id)) {
+                pregunta = cliente.getPreguntaSeguridad();
+            }
+        }
+        for (Administrador administrador : concesionario.getAdministradores()) {
+            if (administrador.getId().equals(id)) {
+                pregunta = administrador.getPreguntaSeguridad();
+            }
+        }
+        return pregunta; 
+    }
 }
-
 

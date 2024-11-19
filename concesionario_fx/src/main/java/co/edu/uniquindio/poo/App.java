@@ -5,11 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.time.LocalDate;
-
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
-
 import co.edu.uniquindio.poo.model.*;
 import co.edu.uniquindio.poo.viewController.*;
 
@@ -30,7 +26,6 @@ public class App extends Application {
     }
     
 
-
     public void openViewPrincipal() {
         inicializarData();
         try {
@@ -48,7 +43,7 @@ public class App extends Application {
             e.printStackTrace();
         }
     }
-
+    
     public void openHomeCliente() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -61,7 +56,7 @@ public class App extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }
@@ -78,25 +73,24 @@ public class App extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }   
     public void openComprarVehiculo() {
         try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(App.class.getResource("ComprarVehiculo.fxml"));
-            VBox rootLayout = (VBox) loader.load();
-            ComprarVehiculoViewController comprarVehiculoViewController = loader.getController();
-            comprarVehiculoViewController.setApp(this);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(App.class.getResource("ComprarVehiculo.fxml"));
+        AnchorPane rootLayout = (AnchorPane) loader.load();
+        ComprarVehiculoViewController comprarVehiculoViewController = loader.getController();
+        comprarVehiculoViewController.setApp(this);
 
-            Scene scene = new Scene(rootLayout);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        Scene scene = new Scene(rootLayout);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
     }
 
     public void openAdministrarEmpleados(){
@@ -111,7 +105,7 @@ public class App extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }
@@ -128,7 +122,7 @@ public class App extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }

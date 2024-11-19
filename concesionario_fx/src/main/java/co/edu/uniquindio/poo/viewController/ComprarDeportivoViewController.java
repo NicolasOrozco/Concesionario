@@ -223,7 +223,11 @@ public class ComprarDeportivoViewController {
 
     @FXML
     void onCrearVehiculo(ActionEvent event) {
-
+        app.concesionario.comprarVehiculO(builldVehiculo(), txfCedulaEmpleado.getText(), txf)
+    }
+    @FXML
+    void initialize(){
+        ComprarDeportivoController comprarDeportivoController = new ComprarDeportivoController(app.concesionario);
     }
     
     public void setApp(App app) {

@@ -179,6 +179,23 @@ public class App extends Application {
         }
     }
 
+    public void openComprarDeportivo(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarDeportivo.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarDeportivoViewController viewController = loader.getController();
+            viewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
 
     public void openViewAdministrador(){
         try {

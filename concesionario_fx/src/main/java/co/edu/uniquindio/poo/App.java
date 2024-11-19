@@ -79,15 +79,15 @@ public class App extends Application {
     }   
     public void openComprarVehiculo() {
         try {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(App.class.getResource("ComprarVehiculo.fxml"));
-        AnchorPane rootLayout = (AnchorPane) loader.load();
-        ComprarVehiculoViewController comprarVehiculoViewController = loader.getController();
-        comprarVehiculoViewController.setApp(this);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("ComprarVehiculo.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            ComprarVehiculoViewController comprarVehiculoViewController = loader.getController();
+            comprarVehiculoViewController.setApp(this);
 
-        Scene scene = new Scene(rootLayout);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
     } catch (IOException e) {
         e.printStackTrace();
     }
